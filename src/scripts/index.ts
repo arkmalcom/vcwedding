@@ -21,12 +21,8 @@ navbar.innerHTML = `
 `;
 
 const langButton = document.createElement("button");
-langButton.className = "lang-button";
-langButton.innerHTML = `
-  <div class="flex items-center justify-center bg-amber-950 text-amber-50 font-semibold font-serif p-2 rounded-lg shadow-md fixed bottom-4 left-4 z-10">
-    <button id="lang-button" class="text-2xl"></span>
-  </div>
-`;
+langButton.className = "lang-button flex items-center justify-center bg-amber-950 text-amber-50 font-semibold font-serif p-2 rounded-lg shadow-md fixed bottom-4 left-4 z-20";
+langButton.id = "lang-button";
 
 const ourStory = document.createElement("section");
 ourStory.className = "section w-screen h-screen bg-amber-950 bg-orange-100";
@@ -53,5 +49,10 @@ updateContent();
 
 const langButtonElement = document.getElementById("lang-button");
 langButtonElement!.addEventListener("click", () => {
+  langButton.disabled = true;
   changeLanguage();
+
+  setTimeout(() => {
+    langButton.disabled = false;
+  }, 500);
 });
