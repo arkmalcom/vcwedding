@@ -14,7 +14,7 @@ i18next.init(
       },
     },
   },
-  function (err, t) {
+  function (err) {
     if (err) console.error("i18next initialization failed:", err);
   },
 );

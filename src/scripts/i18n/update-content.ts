@@ -4,8 +4,9 @@ import enTranslations from "../../localization/en.json";
 function updateContent() {
   for (const key in enTranslations) {
     if (enTranslations.hasOwnProperty(key)) {
-      const element = enTranslations[key];
-      document.getElementById(key).innerText = i18next.t(key);
+      const element = document.getElementById(key);
+      if (!element) continue;
+      element.innerText = i18next.t(key);
     }
   }
 }
