@@ -21,7 +21,8 @@ navbar.innerHTML = `
 `;
 
 const langButton = document.createElement("button");
-langButton.className = "lang-button flex items-center justify-center bg-amber-950 text-amber-50 font-semibold font-serif p-2 rounded-lg shadow-md fixed bottom-4 left-4 z-20";
+langButton.className =
+  "lang-button flex items-center justify-center bg-amber-950 text-amber-50 font-semibold font-serif p-2 rounded-lg shadow-md fixed bottom-4 left-4 z-20";
 langButton.id = "lang-button";
 
 const ourStory = document.createElement("section");
