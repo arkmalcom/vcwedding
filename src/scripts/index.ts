@@ -8,7 +8,7 @@ const app = document.querySelector<HTMLDivElement>("#app")!;
 const navbar = document.createElement("nav");
 navbar.className = "navbar";
 navbar.innerHTML = `
-  <div class="w-screen h-50 flex items-center bg-amber-950 fixed shadow-md z-10">
+  <div class="w-screen h-50 flex items-center bg-amber-950 fixed border-b-2 border-amber-800 shadow-md z-20">
     <div class="flex space-x-4 p-2 w-full justify-between">
       <div class="flex items-center space-x-4">
         <div class="text-amber-50 text-2xl font-semibold font-logo text-2xl">M&S</div>
@@ -29,12 +29,12 @@ langButton.innerHTML = `
   </div>
 `;
 
-const landing = document.createElement("div");
-landing.className = "landing bg-cover max-md:bg-left";
+const landing = document.createElement("section");
+landing.className = "section w-screen h-screen bg-cover bg-fixed max-md:bg-left";
 landing.style.backgroundImage = `url(${watercolorBg})`;
 landing.innerHTML = `
-  <div class="w-screen h-screen flex items-center justify-center">
-    <img src="${leafBorder}" alt="watercolor leaves" class="absolute inset-0 object-cover w-full h-full z-1 opacity-75" />
+  <div class="flex items-center justify-center">
+    <img src="${leafBorder}" alt="watercolor leaves" class="absolute object-cover w-screen h-screen z-1 opacity-75" />
     <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-950 text-6xl font-logo font-semibold border-amber-950 h-screen md:w-1/2">
       <p>Malcom</p>
       <div class="flex items-center justify-center md:m-2 text-amber-800">
@@ -43,7 +43,7 @@ landing.innerHTML = `
         <div class="border-t border-amber-800 md:w-1/4 w-32"></div>
       </div>
       <p>Sheyla</p>
-      <div class="md:py-24 py-8">
+      <div class="md:py-24 py-8 flex md:space-y-4 space-y-2 flex-col">
         <p id="save-the-date" class="text-amber-950 md:text-4xl text-base font-serif">Save the Date</p>
         <p id="date" class="text-amber-800 md:text-4xl text-base uppercase font-semibold font-serif">November 9, 2024</p>
       </div>
@@ -54,9 +54,24 @@ landing.innerHTML = `
   </div>
 `;
 
+const ourStory = document.createElement("section");
+ourStory.className = "section w-screen h-screen bg-amber-950 bg-orange-100";
+ourStory.innerHTML = `
+  <div class="flex items-center justify-center border-b-4 border-t-4 border-amber-950">
+    <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-50 text-6xl font-logo font-semibold border-amber-950 h-screen md:w-1/2">
+      <p id="our-story-title"></p>
+      <div class="md:py-24 py-8 flex md:space-y-4 space-y-2 flex-col">
+        <p class="text-amber-950">No se permiten niños</p>
+        <p id="our-story-text"></p>
+      </div>
+    </div>
+  </div>
+`;
+
 app.appendChild(navbar);
 app.appendChild(langButton);
 app.appendChild(landing);
+app.appendChild(ourStory);
 
 updateContent();
 
