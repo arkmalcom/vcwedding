@@ -3,9 +3,9 @@ export default {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
   theme: {
     fontFamily: {
-      stylized: ["Pacifico", "cursive"],
-      logo: ["Windsong", "cursive"],
-      serif: ["Merriweather", "serif"],
+      stylized: ["Amatic SC", "serif"],
+      logo: ["Great Vibes", "cursive"],
+      serif: ["Nanum Myeongjo", "serif"],
     },
   },
   plugins: [],
