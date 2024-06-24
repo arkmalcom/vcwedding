@@ -1,10 +1,12 @@
 import CountdownTimer from "./components/countdown-timer";
+import watercolorBg from "../assets/watercolor-bg.jpg";
 
 const moreInfo = document.createElement("section");
-moreInfo.className = "section w-screen h-screen bg-amber-950 bg-orange-100";
+moreInfo.className = "section w-screen h-screen bg-orange-100 bg-cover bg-fixed bg-right";
+moreInfo.style.backgroundImage = `url(${watercolorBg})`;
 moreInfo.innerHTML = `
-  <div class="flex w-screen flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">
-    <div id="countdown-section" class="flex flex-col justify-center items-center p-4 m-4 font-serif text-3xl text-amber-950 border-b-4 border-amber-950 lg:text-4xl w-screen">
+  <div class="flex w-screen h-screen flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">
+    <div id="countdown-section" class="flex flex-col justify-center items-center p-4 font-serif text-3xl text-amber-950 border-b-4 border-amber-950 lg:text-4xl w-screen bg-orange-100">
       <div class="flex flex-row justify-center items-center space-x-6 lg:space-x-4 mb-4">
         <div class="border-l-2 border-r-2 border-amber-950 py-2 lg:py-3 lg:w-20 w-16 font-semibold text-center">
         <p id="num-days" class="text-amber-950">0</p>
@@ -23,6 +25,9 @@ moreInfo.innerHTML = `
         <p id="seconds" class="text-base lg:text-xl py-2">Seconds</p>
         </div>
       </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=18.475471,-69.886072" target="_blank" rel="noopener noreferrer">
+        <button id="location-button" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 text-amber-950 uppercase font-black font-serif hover:text-amber-800"></button>
+      </a>
     </div>
     <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-50 text-6xl font-logo font-semibold border-amber-950 h-screen lg:w-1/2">
       <p id="our-story-title"></p>

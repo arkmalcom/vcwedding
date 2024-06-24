@@ -1,11 +1,14 @@
 {
   "title": "Wedding",
   "our-story": "Our Story",
+  "our-story-mobile": "Our Story",
   "location": "Location",
+  "location-button": "Get Directions",
+  "location-mobile": "Location",
   "save-the-date": "Save the Date",
   "days": "Days",
   "hours": "Hrs.",
   "minutes": "Min.",
   "seconds": "Sec.",
-  "date": "November 9, 2024"
+  "date": "November 9th, 2024"
 }

@@ -1,7 +1,10 @@
 {
   "title": "Boda de Malcom y Sheyla",
   "our-story": "Nuestra Historia",
+  "our-story-mobile": "Nuestra Historia",
   "location": "Ubicación",
+  "location-button": "Ver Ubicación",
+  "location-mobile": "Ubicación",
   "save-the-date": "Tenemos el gusto de invitarte a nuestra boda",
   "days": "Días",
   "hours": "Hs.",
