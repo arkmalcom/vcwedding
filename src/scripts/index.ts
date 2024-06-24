@@ -2,6 +2,7 @@ import "../styles/style.css";
 import { changeLanguage, updateContent } from "./i18n/update-content";
 import landing from "./landing";
 import moreInfo from "./info";
+import rsvpModal from "./components/rsvp-modal";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -16,7 +17,7 @@ navbar.innerHTML = `
       <ul class="hidden lg:flex space-x-4">
         <li><a id="our-story" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
         <li><a id="location" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
-        <li><a href="#" class="text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2">RSVP</a></li>
+        <li><a href="#" class="rsvp text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2">RSVP</a></li>
       </ul>
       <button id="menu-toggle" class="lg:hidden text-amber-50 focus:outline-none">
         <i class="fas fa-bars text-amber-50 text-3xl"></i>
@@ -26,7 +27,7 @@ navbar.innerHTML = `
   <div id="mobile-menu" class="hidden flex-col space-y-1 items-center bg-amber-950 w-full text-center absolute top-0 left-0 pt-12 pb-2 lg:hidden">
     <a id="our-story-mobile" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
     <a id="location-mobile" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
-    <a href="#" class="block text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2 mt-2">RSVP</a>
+    <a href="#" class="rsvp block text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2 mt-2">RSVP</a>
   </div>
 `;
 
@@ -47,32 +48,42 @@ updateContent();
 
 (window as any).changeLanguage = changeLanguage;
 
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
   let menuOpen = false;
 
   if (!menuToggle || !mobileMenu) {
     return;
   }
 
-  menuToggle.addEventListener('click', () => {
+  menuToggle.addEventListener("click", () => {
     menuOpen = !menuOpen;
     if (menuOpen) {
-      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.remove("hidden");
       menuToggle.innerHTML = '<i class="fas fa-times text-3xl"></i>';
-      mobileMenu.classList.add('flex', 'animate-slide-in');
+      mobileMenu.classList.add("flex", "animate-slide-in");
     } else {
-      mobileMenu.classList.add('animate-slide-out');
+      mobileMenu.classList.add("animate-slide-out");
       menuToggle.innerHTML = '<i class="fas fa-bars text-3xl"></i>';
-      mobileMenu.classList.remove('flex', 'animate-slide-in');
+      mobileMenu.classList.remove("flex", "animate-slide-in");
       setTimeout(() => {
-        mobileMenu.classList.remove('animate-slide-out');
-        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove("animate-slide-out");
+        mobileMenu.classList.add("hidden");
       }, 300);
     }
   });
 });
+
+const rsvpButtonClass = document.querySelectorAll(".rsvp");
+if (rsvpButtonClass) {
+  rsvpButtonClass.forEach((button) => {
+    button.addEventListener("click", () => {
+      app.appendChild(rsvpModal);
+      updateContent();
+    });
+  });
+}
 
 const langButtonElement = document.getElementById("lang-button");
 langButtonElement!.addEventListener("click", () => {

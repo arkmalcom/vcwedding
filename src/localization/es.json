@@ -10,5 +10,9 @@
   "hours": "Hs.",
   "minutes": "Min.",
   "seconds": "Seg.",
+  "rsvp-form-name": "Nombre",
+  "rsvp-form-email": "Email",
+  "rsvp-form-guests": "Cantidad de Invitados",
+  "submit-button": "Enviar",
   "date": "9 de Noviembre, 2024"
 }
