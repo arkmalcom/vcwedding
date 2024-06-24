@@ -22,16 +22,19 @@ navbar.innerHTML = `
 
 const langButton = document.createElement("button");
 langButton.className =
-  "lang-button flex items-center justify-center bg-amber-950 text-amber-50 font-semibold font-serif p-2 rounded-lg shadow-md fixed bottom-4 left-4 z-20";
+  "lang-button flex items-center justify-center p-1 rounded-lg shadow-md fixed bottom-4 left-4 w-10 h-10 z-20";
 langButton.id = "lang-button";
+langButton.innerHTML = `
+  <span class="fi fi-us w-12 h-12"></span>
+`;
 
 const ourStory = document.createElement("section");
 ourStory.className = "section w-screen h-screen bg-amber-950 bg-orange-100";
 ourStory.innerHTML = `
   <div class="flex items-center justify-center border-b-4 border-t-4 border-amber-950">
-    <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-50 text-6xl font-logo font-semibold border-amber-950 h-screen md:w-1/2">
+    <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-50 text-6xl font-logo font-semibold border-amber-950 h-screen lg:w-1/2">
       <p id="our-story-title"></p>
-      <div class="md:py-24 py-8 flex md:space-y-4 space-y-2 flex-col">
+      <div class="lg:py-24 py-8 flex lg:space-y-4 space-y-2 flex-col">
         <p class="text-amber-950">No se permiten niños</p>
         <p id="our-story-text"></p>
       </div>
