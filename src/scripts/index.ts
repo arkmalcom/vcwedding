@@ -1,6 +1,7 @@
 import "../styles/style.css";
 import { changeLanguage, updateContent } from "./i18n/update-content";
 import landing from "./landing";
+import moreInfo from "./info";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -28,24 +29,10 @@ langButton.innerHTML = `
   <span class="fi fi-us w-12 h-12"></span>
 `;
 
-const ourStory = document.createElement("section");
-ourStory.className = "section w-screen h-screen bg-amber-950 bg-orange-100";
-ourStory.innerHTML = `
-  <div class="flex items-center justify-center border-b-4 border-t-4 border-amber-950">
-    <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-50 text-6xl font-logo font-semibold border-amber-950 h-screen lg:w-1/2">
-      <p id="our-story-title"></p>
-      <div class="lg:py-24 py-8 flex lg:space-y-4 space-y-2 flex-col">
-        <p class="text-amber-950">No se permiten niños</p>
-        <p id="our-story-text"></p>
-      </div>
-    </div>
-  </div>
-`;
-
 app.appendChild(navbar);
 app.appendChild(langButton);
 app.appendChild(landing);
-app.appendChild(ourStory);
+app.appendChild(moreInfo);
 
 updateContent();
 
