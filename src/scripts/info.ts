@@ -7,6 +7,7 @@ moreInfo.innerHTML = `
   <div class="flex w-screen h-screen flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">\
     <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-screen opacity-25" />
     <div id="countdown-section" class="flex flex-col justify-center items-center p-4 font-serif text-3xl text-amber-950 border-b-4 border-amber-950 bg-orange-100 z-20 lg:text-4xl w-screen">
+      <h1 id="countdown-title" class="text-amber-950 font-bold font-logo pb-2"></h1>
       <div class="flex flex-row justify-center items-center space-x-6 lg:space-x-4 mb-4">
         <div class="border-l-2 border-r-2 border-amber-950 py-2 lg:py-3 lg:w-20 w-16 font-semibold text-center">
         <p id="num-days" class="text-amber-950">0</p>

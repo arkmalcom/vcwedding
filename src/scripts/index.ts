@@ -24,7 +24,7 @@ navbar.innerHTML = `
       </button>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden flex-col space-y-1 items-center bg-amber-950 w-full text-center absolute top-0 left-0 pt-12 pb-2 lg:hidden">
+  <div id="mobile-menu" class="hidden flex-col space-y-1 items-center border-b-2 border-amber-700 bg-amber-950 w-full text-center absolute top-0 left-0 pt-12 pb-2 lg:hidden">
     <a id="our-story-mobile" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
     <a id="location-mobile" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
     <a href="#" class="rsvp block text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2 mt-2">RSVP</a>
@@ -33,7 +33,7 @@ navbar.innerHTML = `
 
 const langButton = document.createElement("button");
 langButton.className =
-  "lang-button flex items-center justify-center p-1 rounded-lg shadow-md fixed bottom-4 left-4 w-10 h-10 z-20";
+  "lang-button flex items-center justify-center p-1 rounded-lg shadow-md fixed bottom-4 left-4 w-10 h-10 z-30";
 langButton.id = "lang-button";
 langButton.innerHTML = `
   <span class="fi fi-us w-12 h-12"></span>
