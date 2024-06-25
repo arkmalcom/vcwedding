@@ -1,7 +1,7 @@
 {
   "title": "Boda de Malcom y Sheyla",
-  "our-story": "Nuestra Historia",
-  "our-story-mobile": "Nuestra Historia",
+  "our-story": "Nuestro Amor",
+  "our-story-mobile": "Nuestro Amor",
   "location": "Ubicación",
   "location-button": "Ver Ubicación",
   "location-mobile": "Ubicación",
@@ -12,8 +12,13 @@
   "seconds": "Seg.",
   "rsvp-form-name": "Nombre",
   "rsvp-form-email": "Email",
-  "rsvp-form-guests": "Cantidad de Invitados",
+  "attending-yes-label": "Sí, asistiré!",
+  "attending-no-label": "No, no asistiré",
+  "invited-by": "Invitado por parte de",
   "submit-button": "Enviar",
-  "countdown-title": "Falta",
+  "submission-positive": "Gracias por confirmar tu asistencia! 😊",
+  "submission-positive-content": "Aprovecha esta oportunidad para verificar el codigo de vestimenta, la ubicación y la lista de regalos.",
+  "submission-negative": "tt mmg 😔",
+  "countdown-title": "Faltan",
   "date": "9 de Noviembre, 2024"
 }

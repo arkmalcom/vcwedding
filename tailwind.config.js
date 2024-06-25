@@ -8,5 +8,5 @@ export default {
       serif: ["Nanum Myeongjo", "serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

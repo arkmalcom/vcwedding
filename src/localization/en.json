@@ -13,7 +13,13 @@
   "rsvp-form-name": "Name",
   "rsvp-form-email": "Email",
   "rsvp-form-guests": "Number of Guests",
+  "attending-yes-label": "Yes, I'll be there!",
+  "attending-no-label": "Sorry, I can't make it",
+  "invited-by": "Invited by",
   "submit-button": "Submit",
+  "submission-positive": "Thank you for confirming your presence! 😊",
+  "submission-positive-content": "Please take some time to review the dress code, location and gift list. We can't wait to see you there!",
+  "submission-negative": "We're sorry to hear you will not be making it. 😔",
   "countdown-title": "Countdown to the Big Day",
   "date": "November 9th, 2024"
 }
