@@ -16,8 +16,8 @@ landing.innerHTML = `
       </div>
       <p>Sheyla</p>
       <div class="lg:py-8 py-8 flex lg:space-y-4 space-y-2 flex-col">
-        <p id="save-the-date" class="text-amber-950 lg:text-4xl text-base font-serif"></p>
-        <p id="date" class="text-amber-800 lg:text-4xl text-base uppercase font-semibold font-serif"></p>
+        <p i18n-key="saveTheDate" class="text-amber-950 lg:text-4xl text-base font-serif"></p>
+        <p i18n-key="date" class="text-amber-800 lg:text-4xl text-base uppercase font-semibold font-serif"></p>
       </div>
       <div class="lg:py-8 py-4">
         <a href="#" class="rsvp text-amber-950 uppercase font-semibold font-stylized hover:text-amber-600 hover:border-amber-600 border-2 border-amber-950 p-2">RSVP</a>

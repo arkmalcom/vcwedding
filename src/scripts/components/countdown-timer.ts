@@ -27,7 +27,7 @@ class CountdownTimer {
       callback(days, hours, minutes, seconds);
     };
 
-    updateTimer(); // Call once immediately
+    updateTimer();
 
     this.intervalId = setInterval(updateTimer, 1000);
   }

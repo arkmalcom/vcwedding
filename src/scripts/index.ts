@@ -15,8 +15,8 @@ navbar.innerHTML = `
         <div class="text-amber-50 text-2xl font-semibold font-logo text-2xl">M&S</div>
       </div>
       <ul class="hidden lg:flex space-x-4">
-        <li><a id="our-story" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
-        <li><a id="location" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
+        <li><a i18n-key="nav.ourStory" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
+        <li><a i18n-key="nav.location" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
         <li><a href="#" class="rsvp text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2">RSVP</a></li>
       </ul>
       <button id="menu-toggle" class="lg:hidden text-amber-50 focus:outline-none">
@@ -25,8 +25,8 @@ navbar.innerHTML = `
     </div>
   </div>
   <div id="mobile-menu" class="hidden flex-col space-y-1 items-center border-b-2 border-amber-700 bg-amber-950 w-full text-center absolute top-0 left-0 pt-12 pb-2 lg:hidden">
-    <a id="our-story-mobile" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
-    <a id="location-mobile" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
+    <a i18n-key="nav.ourStory" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
+    <a i18n-key="nav.location" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
     <a href="#" class="rsvp block text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2 mt-2">RSVP</a>
   </div>
 `;

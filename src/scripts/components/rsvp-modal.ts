@@ -1,23 +1,47 @@
 import { updateContent } from "../i18n/update-content";
+import { getInviteTypeFromURL } from "../utils/invite-type";
+
+const inviteType = getInviteTypeFromURL();
 
 let modalContent = `
-  <form id="rsvp-form" class="flex flex-col space-y-4">
-    <label for="name" id="rsvp-form-name" class="text-amber-50 font-stylized text-2xl"></label>
+  <form id="rsvp-form" class="flex flex-col space-y-1">
+    <label for="name" i18n-key="rsvpForm.name" class="text-amber-50 font-stylized text-2xl"></label>
     <input type="text" id="name" name="name" class="border-2 border-emerald-950 bg-emerald-700 p-2 rounded-md text-amber-50 focus:border-emerald-500 focus:bg-emerald-600 focus:ring-emerald-600 hover:border-emerald-500" required />
-    <label for="email" id="rsvp-form-email" class="text-amber-50 font-stylized text-2xl"></label>
+    <label for="email" i18n-key="rsvpForm.email" class="text-amber-50 font-stylized text-2xl"></label>
     <input type="email" id="email" name="email" class="border-2 border-emerald-950 bg-emerald-700 p-2 rounded-md text-amber-50 focus:border-emerald-500 focus:bg-emerald-600 focus:ring-emerald-600 hover:border-emerald-500" required />
-    <label for="invited-by" id="invited-by" class="text-amber-50 font-stylized text-2xl"></label>
+    <div class="flex space-x-4 justify-center items-center">
+      <input type="radio" id="attending-yes" name="attending" value="yes" class="border-emerald-950 bg-emerald-500 text-emerald-500 focus:ring-emerald-700 focus:ring-2 focus:ring-emerald-600 hover:border-emerald-500" required />
+      <label i18n-key="rsvpForm.attendingYes" class="text-amber-50 p-0 m-0"></label>
+      <input type="radio" id="attending-no" name="attending" value="no" class="border-emerald-950 bg-emerald-500 text-emerald-500 focus:ring-emerald-700 focus:ring-2 focus:ring-emerald-600 hover:border-emerald-500" required />
+      <label id="attending-no-label" i18n-key="rsvpForm.attendingNo" class="text-amber-50"></label>
+    </div>
+`;
+
+if (inviteType === "plus-one") {
+  modalContent += `
+    <div class="border-1 border-t border-emerald-950 bg-emerald-800 py-1"></div>
+    <p i18n-key="rsvpForm.plusOne" class="text-amber-50 font-stylized text-2xl"></p>
+    <label for="plus-one-name" i18n-key="rsvpForm.name" class="text-amber-50 font-stylized text-2xl"></label>
+    <input type="text" id="plus-one-name" name="plus-one-name" class="border-2 border-emerald-950 bg-emerald-700 p-2 rounded-md text-amber-50 focus:border-emerald-500 focus:bg-emerald-600 focus:ring-emerald-600 hover:border-emerald-500" required />
+    <label for="plus-one-email" i18n-key="rsvpForm.email" class="text-amber-50 font-stylized text-2xl"></label>
+    <input type="email" id="plus-one-email" name="plus-one-email" class="border-2 border-emerald-950 bg-emerald-700 p-2 rounded-md text-amber-50 focus:border-emerald-500 focus:bg-emerald-600 focus:ring-emerald-600 hover:border-emerald-500" required />
+    <div class="flex space-x-4 justify-center items-center">
+      <input type="radio" id="plus-one-attending-yes" name="plus-one-attending" value="yes" class="border-emerald-950 bg-emerald-500 text-emerald-500 focus:ring-emerald-700 focus:ring-2 focus:ring-emerald-600 hover:border-emerald-500" required />
+      <label i18n-key="rsvpForm.attendingYes" class="text-amber-50 p-0 m-0"></label>
+      <input type="radio" id="plus-one-attending-no" name="plus-one-attending" value="no" class="border-emerald-950 bg-emerald-500 text-emerald-500 focus:ring-emerald-700 focus:ring-2 focus:ring-emerald-600 hover:border-emerald-500" required />
+      <label i18n-key="rsvpForm.attendingNo" class="text-amber-50"></label>
+    </div>
+  `;
+}
+
+modalContent += `
+    <div class="border-1 border-t border-emerald-950 bg-emerald-800 py-1"></div>
+    <label for="invited-by" i18n-key="rsvpForm.invitedBy" class="text-amber-50 font-stylized text-2xl"></label>
     <select id="invited-by" name="invited-by" class="border-2 border-emerald-950 bg-emerald-700 p-2 rounded-md text-amber-50 focus:border-emerald-500 focus:bg-emerald-600 focus:ring-emerald-600 hover:border-emerald-500" required>
       <option value="sheyla">Sheyla</option>
       <option value="malcom">Malcom</option>
     </select>
-    <div class="flex space-x-4 justify-center items-center">
-      <input type="radio" id="attending-yes" name="attending" value="yes" class="border-emerald-950 bg-emerald-500 text-emerald-500 focus:ring-emerald-700 focus:ring-2 focus:ring-emerald-600 hover:border-emerald-500" required />
-      <label id="attending-yes-label" class="text-amber-50 p-0 m-0"></label>
-      <input type="radio" id="attending-no" name="attending" value="no" class="border-emerald-950 bg-emerald-500 text-emerald-500 focus:ring-emerald-700 focus:ring-2 focus:ring-emerald-600 hover:border-emerald-500" required />
-      <label id="attending-no-label" class="text-amber-50"></label>
-    </div>
-    <button id="submit-button" type="submit" class="bg-amber-950 text-amber-50 uppercase font-semibold font-serif p-2 rounded-md"></button>
+    <button type="submit" class="border-2 border-emerald-950 bg-emerald-700 p-2 rounded-md text-amber-50 hover:bg-emerald-600 hover:border-emerald-500">Submit</button>
   </form>
 `;
 

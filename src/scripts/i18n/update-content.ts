@@ -1,14 +1,12 @@
 import i18next from "./i18n";
-import enTranslations from "../../localization/en.json";
 
 function updateContent() {
-  for (const key in enTranslations) {
-    if (enTranslations.hasOwnProperty(key)) {
-      const element = document.getElementById(key);
-      if (!element) continue;
-      element.innerText = i18next.t(key);
-    }
-  }
+  document.querySelectorAll("[i18n-key]").forEach((element) => {
+    const el = element as HTMLElement;
+    const key = element.getAttribute("i18n-key");
+    if (!key) return;
+    el.innerText = i18next.t(key);
+  });
 }
 
 function changeLanguage() {
