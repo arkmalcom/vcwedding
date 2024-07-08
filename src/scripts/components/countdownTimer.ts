@@ -1,6 +1,6 @@
 class CountdownTimer {
   private targetDate: Date;
-  private intervalId: NodeJS.Timeout | undefined;
+  private intervalId: number | undefined;
 
   constructor(targetDateString: string) {
     this.targetDate = new Date(targetDateString);
