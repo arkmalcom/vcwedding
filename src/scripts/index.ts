@@ -1,8 +1,8 @@
 import "../styles/style.css";
-import { changeLanguage, updateContent } from "./i18n/update-content";
+import { changeLanguage, updateContent } from "./i18n/updateContent";
 import landing from "./landing";
 import moreInfo from "./info";
-import rsvpModal from "./components/rsvp-modal";
+import rsvpModal from "./components/rsvpModal";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 

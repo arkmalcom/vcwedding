@@ -1,4 +1,4 @@
-import CountdownTimer from "./components/countdown-timer";
+import CountdownTimer from "./components/countdownTimer";
 import watercolorBg from "../assets/watercolor-bg.jpg";
 
 const moreInfo = document.createElement("section");

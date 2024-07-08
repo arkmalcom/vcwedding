@@ -1,5 +1,5 @@
-import { updateContent } from "../i18n/update-content";
-import { getInviteTypeFromURL } from "../utils/invite-type";
+import { updateContent } from "../i18n/updateContent";
+import { getInviteTypeFromURL } from "../utils/inviteType";
 
 const inviteType = getInviteTypeFromURL();
 
@@ -89,7 +89,7 @@ rsvpModal.addEventListener("click", (event) => {
 
 const rsvpForm = rsvpModal.querySelector("#rsvp-form")!;
 
-rsvpForm.addEventListener("submit", (event) => {
+rsvpForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const attending = (
     rsvpForm.querySelector(
@@ -104,7 +104,69 @@ rsvpForm.addEventListener("submit", (event) => {
   } else {
     modalContentContainer.innerHTML = submissionContentNegative;
   }
+  const nameInput = rsvpForm.querySelector('#name') as HTMLInputElement;
+  const emailInput = rsvpForm.querySelector('#email') as HTMLInputElement;
+  const invitedBySelect = rsvpForm.querySelector('#invited-by') as HTMLSelectElement;
+
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const invitedBy = invitedBySelect.value;
+
+  let message = attending === "yes" ? "¡Hola! Confirmo mi asistencia para tu boda!" : "Hola! Lamento no poder asistir a tu boda.";
+  message += `
+    Nombre: ${name}
+    Email: ${email}
+  `
+
+  if (inviteType === "plus-one") {
+      const plusOneAttending = (
+      rsvpForm.querySelector(
+        'input[name="plus-one-attending"]:checked',
+      ) as HTMLInputElement
+    )?.value;
+
+    const plusOneNameInput = rsvpForm.querySelector('#plus-one-name') as HTMLInputElement;
+    const plusOneEmailInput = rsvpForm.querySelector('#plus-one-email') as HTMLInputElement;
+
+    const plusOneName = plusOneNameInput.value;
+    const plusOneEmail = plusOneEmailInput.value;
+
+    if (plusOneAttending === "yes") {
+      message += `
+        Acompañante: ${plusOneName}
+        Email: ${plusOneEmail}
+      `;
+    } else {
+      message += "No llevaré acompañante."
+    }
+  }
+
+  const url = 'https://lemon-chimpanzee-5016.twil.io/rsvp';
+
+  try {
+      const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              invitedBy,
+              message,
+          })
+      });
+
+      if (!response.ok) {
+          throw new Error('Failed to send RSVP.');
+      }
+
+      console.log('RSVP sent successfully');
+  } catch (error) {
+      console.error('Error sending RSVP:', error);
+  }
+  
   updateContent();
 });
+
+
 
 export default rsvpModal;
