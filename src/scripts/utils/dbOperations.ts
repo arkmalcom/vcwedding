@@ -18,7 +18,6 @@ async function addRSVP(
     plus_one_name: "",
     plus_one_email: "",
     is_plus_one_attending: false,
-
   };
 
   if (plusOneName && plusOneEmail && isPlusOneAttending !== undefined) {
@@ -35,7 +34,7 @@ async function addRSVP(
     return true;
   } catch (e) {
     console.error("Error adding document: ", e);
-    return false
+    return false;
   }
 }
 

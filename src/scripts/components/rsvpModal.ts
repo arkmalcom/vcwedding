@@ -100,15 +100,14 @@ rsvpForm.addEventListener("submit", async (event) => {
 
   const name = (rsvpForm.querySelector("#name") as HTMLInputElement).value;
   const email = (rsvpForm.querySelector("#email") as HTMLInputElement).value;
-  const invitedBy = (rsvpForm.querySelector(
-    "#invited-by",
-  ) as HTMLSelectElement).value;
-  const plusOneName = (rsvpForm.querySelector(
-    "#plus-one-name",
-  ) as HTMLInputElement)?.value;
-  const plusOneEmail = (rsvpForm.querySelector(
-    "#plus-one-email",
-  ) as HTMLInputElement)?.value;
+  const invitedBy = (rsvpForm.querySelector("#invited-by") as HTMLSelectElement)
+    .value;
+  const plusOneName = (
+    rsvpForm.querySelector("#plus-one-name") as HTMLInputElement
+  )?.value;
+  const plusOneEmail = (
+    rsvpForm.querySelector("#plus-one-email") as HTMLInputElement
+  )?.value;
   const isPlusOneAttending = (
     rsvpForm.querySelector(
       'input[name="plus-one-attending"]:checked',
@@ -131,7 +130,7 @@ rsvpForm.addEventListener("submit", async (event) => {
     modalContentContainer.innerHTML = submissionContentPositive;
   } else {
     modalContentContainer.innerHTML = submissionContentNegative;
-  }   
+  }
 
   updateContent();
 });
