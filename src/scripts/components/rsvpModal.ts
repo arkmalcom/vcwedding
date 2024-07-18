@@ -3,6 +3,7 @@ import { getInviteTypeFromURL } from "../utils/inviteType";
 import { addRSVP } from "../utils/dbOperations";
 
 const inviteType = getInviteTypeFromURL();
+const stage = import.meta.env.VITE_ENV || "dev";
 
 let modalContent = `
   <form id="rsvp-form" class="flex flex-col space-y-1">
@@ -50,12 +51,33 @@ const submissionContentPositive = `
   <div class="flex flex-col space-y-4 pt-4 justify-center text-amber-50 font-serif">
     <p i18n-key="rsvpForm.positiveSubmission" class="text-amber-50 font-serif lg:text-2xl text-base font-semibold"></p>
     <p i18n-key="rsvpForm.positiveSubmissionContent" class="text-sm"></p>
+    <div class="border-1 border-b border-emerald-950 bg-emerald-800 py-1"></div>
   </div>
 `;
 
 const submissionContentNegative = `
   <div class="flex flex-col space-y-4 pt-4 justify-center text-amber-50 font-serif">
     <p i18n-key="rsvpForm.negativeSubmission" class="text-amber-50 font-serif lg:text-2xl text-base font-semibold"></p>
+    <div class="border-1 border-b border-emerald-950 bg-emerald-800 py-1"></div>
+  </div>
+`;
+
+const dressCode = `
+  <div class="flex flex-col space-y-4 pt-4 justify-center items-center text-amber-50 font-serif">
+    <a href="#" target="_blank" rel="noopener noreferrer">
+      <button i18n-key="dressCode" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-80 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm"></button>
+    </a>
+  </div>
+`;
+
+const additionalContent = `
+  <div class="flex flex-col space-y-4 pt-4 justify-center items-center text-amber-50 font-serif">
+    <a href="https://listaderegalos.casacuesta.com/Event/SheylaLoraine-and-Malcom?utm_source=share" target="_blank" rel="noopener noreferrer">
+      <button i18n-key="giftListBachelorette" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-80 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm></button>
+    </a>
+    <a href="https://listaderegalos.casacuesta.com/Event/Malcom-SheylaLoraine" target="_blank" rel="noopener noreferrer">
+      <button i18n-key="giftListWedding" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-80 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm"></button>
+    </a>
   </div>
 `;
 
@@ -114,22 +136,27 @@ rsvpForm.addEventListener("submit", async (event) => {
     ) as HTMLInputElement
   )?.value;
 
-  await addRSVP(
-    name,
-    email,
-    isAttending === "yes",
-    invitedBy,
-    plusOneName,
-    plusOneEmail,
-    isPlusOneAttending === "yes",
-  );
+  if (stage === "prod") {
+    await addRSVP(
+      name,
+      email,
+      isAttending === "yes",
+      invitedBy,
+      plusOneName,
+      plusOneEmail,
+      isPlusOneAttending === "yes",
+    );
+  }
 
   const modalContentContainer = rsvpModal.querySelector("#modal-content")!;
 
   if (isAttending === "yes") {
     modalContentContainer.innerHTML = submissionContentPositive;
+    modalContentContainer.innerHTML += dressCode;
+    modalContentContainer.innerHTML += additionalContent;
   } else {
     modalContentContainer.innerHTML = submissionContentNegative;
+    modalContentContainer.innerHTML += additionalContent;
   }
 
   updateContent();

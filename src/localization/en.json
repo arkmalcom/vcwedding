@@ -13,7 +13,7 @@
     "invitedBy": "Invited by",
     "submit": "Submit",
     "positiveSubmission": "Thank you for confirming your presence! 😊",
-    "positiveSubmissionContent": "Please take some time to review the dress code, location and gift list. We can't wait to see you there!",
+    "positiveSubmissionContent": "Please take some time to review the dress code, location and gift lists. We can't wait to see you there!",
     "negativeSubmission": "We're sorry to hear you will not be making it. 😔"
   },
   "title": "Wedding",
@@ -24,5 +24,8 @@
   "minutes": "Min.",
   "seconds": "Sec.",
   "countdownTitle": "Countdown to the Big Day",
-  "date": "November 9th, 2024"
+  "date": "November 9th, 2024",
+  "dressCode": "Dress Code",
+  "giftListBachelorette": "Gift List (Bachelorette Party)",
+  "giftListWedding": "Gift List (Wedding)"
 }

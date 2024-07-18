@@ -13,7 +13,7 @@
     "invitedBy": "Invitado por parte de",
     "submit": "Enviar",
     "positiveSubmission": "Gracias por confirmar tu asistencia! 😊",
-    "positiveSubmissionContent": "Aprovecha esta oportunidad para verificar el codigo de vestimenta, la ubicación y la lista de regalos.",
+    "positiveSubmissionContent": "Aprovecha esta oportunidad para verificar el codigo de vestimenta, la ubicación y las listas de regalos.",
     "negativeSubmission": "tt mmg 😔"
   },
   "title": "Boda de Malcom y Sheyla",
@@ -24,5 +24,8 @@
   "minutes": "Min.",
   "seconds": "Seg.",
   "countdownTitle": "Faltan",
-  "date": "9 de Noviembre, 2024"
+  "date": "9 de Noviembre, 2024",
+  "dressCode": "Código de Vestimenta",
+  "giftListBachelorette": "Lista de Regalos (Despedida)",
+  "giftListWedding": "Lista de Regalos (Boda)"
 }
