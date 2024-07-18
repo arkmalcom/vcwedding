@@ -1,5 +1,6 @@
 import { updateContent } from "../i18n/updateContent";
 import { getInviteTypeFromURL } from "../utils/inviteType";
+import { addRSVP } from "../utils/dbOperations";
 
 const inviteType = getInviteTypeFromURL();
 
@@ -47,14 +48,14 @@ modalContent += `
 
 const submissionContentPositive = `
   <div class="flex flex-col space-y-4 pt-4 justify-center text-amber-50 font-serif">
-    <p id="submission-positive" class="text-amber-50 font-serif lg:text-2xl text-base font-semibold"></p>
-    <p id="submission-positive-content" class="text-sm"></p>
+    <p i18n-key="rsvpForm.positiveSubmission" class="text-amber-50 font-serif lg:text-2xl text-base font-semibold"></p>
+    <p i18n-key="rsvpForm.positiveSubmissionContent" class="text-sm"></p>
   </div>
 `;
 
 const submissionContentNegative = `
   <div class="flex flex-col space-y-4 pt-4 justify-center text-amber-50 font-serif">
-    <p id="submission-negative" class="text-amber-50 font-serif lg:text-2xl text-base font-semibold"></p>
+    <p i18n-key="rsvpForm.negativeSubmission" class="text-amber-50 font-serif lg:text-2xl text-base font-semibold"></p>
   </div>
 `;
 
@@ -91,87 +92,46 @@ const rsvpForm = rsvpModal.querySelector("#rsvp-form")!;
 
 rsvpForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const attending = (
+  const isAttending = (
     rsvpForm.querySelector(
       'input[name="attending"]:checked',
     ) as HTMLInputElement
   ).value;
 
+  const name = (rsvpForm.querySelector("#name") as HTMLInputElement).value;
+  const email = (rsvpForm.querySelector("#email") as HTMLInputElement).value;
+  const invitedBy = (rsvpForm.querySelector(
+    "#invited-by",
+  ) as HTMLSelectElement).value;
+  const plusOneName = (rsvpForm.querySelector(
+    "#plus-one-name",
+  ) as HTMLInputElement)?.value;
+  const plusOneEmail = (rsvpForm.querySelector(
+    "#plus-one-email",
+  ) as HTMLInputElement)?.value;
+  const isPlusOneAttending = (
+    rsvpForm.querySelector(
+      'input[name="plus-one-attending"]:checked',
+    ) as HTMLInputElement
+  )?.value;
+
+  await addRSVP(
+    name,
+    email,
+    isAttending === "yes",
+    invitedBy,
+    plusOneName,
+    plusOneEmail,
+    isPlusOneAttending === "yes",
+  );
+
   const modalContentContainer = rsvpModal.querySelector("#modal-content")!;
 
-  if (attending === "yes") {
+  if (isAttending === "yes") {
     modalContentContainer.innerHTML = submissionContentPositive;
   } else {
     modalContentContainer.innerHTML = submissionContentNegative;
-  }
-  const nameInput = rsvpForm.querySelector("#name") as HTMLInputElement;
-  const emailInput = rsvpForm.querySelector("#email") as HTMLInputElement;
-  const invitedBySelect = rsvpForm.querySelector(
-    "#invited-by",
-  ) as HTMLSelectElement;
-
-  const name = nameInput.value;
-  const email = emailInput.value;
-  const invitedBy = invitedBySelect.value;
-
-  let message =
-    attending === "yes"
-      ? "¡Hola! Confirmo mi asistencia para tu boda!"
-      : "Hola! Lamento no poder asistir a tu boda.";
-  message += `
-    Nombre: ${name}
-    Email: ${email}
-  `;
-
-  if (inviteType === "plus-one") {
-    const plusOneAttending = (
-      rsvpForm.querySelector(
-        'input[name="plus-one-attending"]:checked',
-      ) as HTMLInputElement
-    )?.value;
-
-    const plusOneNameInput = rsvpForm.querySelector(
-      "#plus-one-name",
-    ) as HTMLInputElement;
-    const plusOneEmailInput = rsvpForm.querySelector(
-      "#plus-one-email",
-    ) as HTMLInputElement;
-
-    const plusOneName = plusOneNameInput.value;
-    const plusOneEmail = plusOneEmailInput.value;
-
-    if (plusOneAttending === "yes") {
-      message += `
-        Acompañante: ${plusOneName}
-        Email: ${plusOneEmail}
-      `;
-    } else {
-      message += "No llevaré acompañante.";
-    }
-  }
-
-  const url = "https://lemon-chimpanzee-5016.twil.io/rsvp";
-
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        invitedBy,
-        message,
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to send RSVP.");
-    }
-
-    console.log("RSVP sent successfully");
-  } catch (error) {
-    console.error("Error sending RSVP:", error);
-  }
+  }   
 
   updateContent();
 });
