@@ -34,7 +34,7 @@ moreInfo.innerHTML = `
         <button i18n-key="locationButton" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 text-amber-950 uppercase font-black font-serif hover:text-amber-800"></button>
       </a>
     </div>
-      <div class="flex z-10 space-y-8 flex-col h-screen py-12">
+      <div class="flex z-10 lg:space-y-8 space-y-4 flex-col h-screen items-center justify-center">
         <div class="flex flex-row">
           <a href="#" target="_blank" rel="noopener noreferrer">
             <button i18n-key="dressCode" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
