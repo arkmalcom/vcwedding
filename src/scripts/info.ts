@@ -1,5 +1,9 @@
 import CountdownTimer from "./components/countdownTimer";
 import watercolorBg from "../assets/watercolor-bg.jpg";
+import dressCode from "../assets/dress-code.png";
+import giftList from "../assets/gift-list.png";
+import weddingRings from "../assets/wedding-rings.png";
+import playlist from "../assets/playlist.png";
 
 const moreInfo = document.createElement("section");
 moreInfo.className = "section relative w-screen h-screen bg-orange-50";
@@ -30,13 +34,32 @@ moreInfo.innerHTML = `
         <button i18n-key="locationButton" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 text-amber-950 uppercase font-black font-serif hover:text-amber-800"></button>
       </a>
     </div>
-    <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-50 text-6xl font-logo font-semibold border-amber-950 h-screen lg:w-1/2">
-      <p id="ourStory-title"></p>
-      <div class="lg:py-24 py-8 flex lg:space-y-4 space-y-2 flex-col">
-        <p class="text-amber-950">No se permiten niños</p>
-        <p id="ourStory-text"></p>
+      <div class="flex z-10 space-y-8 flex-col h-screen py-12">
+        <div class="flex flex-row">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <button i18n-key="dressCode" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
+          </a>
+          <img src="${dressCode}" alt="dress code" class="fade-icon p-2 w-20 h-20" />
+        </div>
+        <div class="flex flex-row">
+          <a href="https://listaderegalos.casacuesta.com/Event/SheylaLoraine-and-Malcom?utm_source=share" target="_blank" rel="noopener noreferrer">
+            <button i18n-key="giftListBachelorette" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
+          </a>
+          <img src="${giftList}" alt="dress code" class="fade-icon px-2 w-20 h-20" />
+        </div>
+        <div class="flex flex-row">
+          <a href="https://listaderegalos.casacuesta.com/Event/Malcom-SheylaLoraine" target="_blank" rel="noopener noreferrer">
+            <button i18n-key="giftListWedding" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
+          </a>
+          <img src="${weddingRings}" alt="dress code" class="fade-icon px-2 w-20 h-16" />
+        </div>
+        <div class="flex flex-row">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <button i18n-key="recommendSong" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
+          </a>
+          <img src="${playlist}" alt="dress code" class="fade-icon p-2 w-20 h-20" />
+        </div>
       </div>
-    </div>
   </div>
 `;
 
@@ -52,6 +75,37 @@ countdown.start((days, hours, minutes, seconds) => {
   numHours.textContent = `${hours}`;
   numMinutes.textContent = `${minutes}`;
   numSeconds.textContent = `${seconds}`;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".fade-button");
+  const icons = document.querySelectorAll(".fade-icon");
+
+  const fadeInOnScroll = () => {
+    buttons.forEach((button) => {
+      const rect = button.getBoundingClientRect();
+      if (
+        rect.top <= window.innerHeight * 0.85 &&
+        rect.bottom >= window.innerHeight * 0.25
+      ) {
+        button.classList.add("fade-in-from-left");
+        button.classList.remove("opacity-0");
+      }
+    });
+    icons.forEach((icon) => {
+      const rect = icon.getBoundingClientRect();
+      if (
+        rect.top <= window.innerHeight * 0.85 &&
+        rect.bottom >= window.innerHeight * 0.25
+      ) {
+        icon.classList.add("fade-in-from-right");
+        icon.classList.remove("opacity-0");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", fadeInOnScroll);
+  fadeInOnScroll();
 });
 
 export default moreInfo;

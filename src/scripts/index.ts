@@ -49,6 +49,7 @@ updateContent();
 (window as any).changeLanguage = changeLanguage;
 
 document.addEventListener("DOMContentLoaded", () => {
+  window.scrollTo(0, 0);
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   let menuOpen = false;
