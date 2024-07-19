@@ -5,7 +5,7 @@ const landing = document.createElement("div");
 landing.className = "h-screen bg-cover bg-fixed max-lg:bg-left";
 landing.style.backgroundImage = `url(${watercolorBg})`;
 landing.innerHTML = `
-  <div class="flex items-center justify-center">
+  <div class="flex flex-col items-center justify-center">
     <img src="${leafBorder}" alt="watercolor leaves" class="absolute object-cover object-top top-0 w-screen h-screen opacity-75" />
     <div class="flex z-10 space-y-1 flex-col justify-center text-center text-amber-950 text-6xl font-logo font-semibold border-amber-950 h-screen w-auto my-10">
       <p>Malcom</p>
@@ -21,6 +21,9 @@ landing.innerHTML = `
       </div>
       <div class="lg:py-8 py-4">
         <a href="#" class="rsvp text-amber-950 uppercase font-semibold font-stylized hover:text-amber-600 hover:border-amber-600 border-2 border-amber-950 p-2">RSVP</a>
+      </div>
+      <div class="relative top-16">
+        <i class="fas fa-chevron-down down-arrow bottom-0 text-amber-950 lg:text-4xl text-2xl"></i>
       </div>
     </div>
   </div>

@@ -1,9 +1,5 @@
 import CountdownTimer from "./components/countdownTimer";
 import watercolorBg from "../assets/watercolor-bg.jpg";
-import dressCode from "../assets/dress-code.png";
-import giftList from "../assets/gift-list.png";
-import weddingRings from "../assets/wedding-rings.png";
-import playlist from "../assets/playlist.png";
 
 const moreInfo = document.createElement("section");
 moreInfo.className = "section relative w-screen h-screen bg-orange-50";
@@ -39,25 +35,21 @@ moreInfo.innerHTML = `
           <a href="#" target="_blank" rel="noopener noreferrer">
             <button i18n-key="dressCode" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
           </a>
-          <img src="${dressCode}" alt="dress code" class="fade-icon p-2 w-20 h-20" />
         </div>
         <div class="flex flex-row">
           <a href="https://listaderegalos.casacuesta.com/Event/SheylaLoraine-and-Malcom?utm_source=share" target="_blank" rel="noopener noreferrer">
             <button i18n-key="giftListBachelorette" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
           </a>
-          <img src="${giftList}" alt="dress code" class="fade-icon px-2 w-20 h-20" />
         </div>
         <div class="flex flex-row">
           <a href="https://listaderegalos.casacuesta.com/Event/Malcom-SheylaLoraine" target="_blank" rel="noopener noreferrer">
             <button i18n-key="giftListWedding" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
           </a>
-          <img src="${weddingRings}" alt="dress code" class="fade-icon px-2 w-20 h-16" />
         </div>
         <div class="flex flex-row">
           <a href="#" target="_blank" rel="noopener noreferrer">
             <button i18n-key="recommendSong" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
           </a>
-          <img src="${playlist}" alt="dress code" class="fade-icon p-2 w-20 h-20" />
         </div>
       </div>
   </div>

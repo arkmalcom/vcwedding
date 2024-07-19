@@ -45,6 +45,20 @@
   }
 }
 
+@keyframes downArrow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+    opacity: 0.5;
+  }
+}
+
+.down-arrow {
+  animation: downArrow 1.5s infinite;
+}
+
 .fade-in-from-left {
   animation: fadeInFromLeft 0.75s ease-out forwards;
 }
