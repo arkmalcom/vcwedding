@@ -2,6 +2,8 @@
   "nav": {
     "ourStory": "Nuestro Amor",
     "location": "Ubicación",
+    "giftLists": "Listas de Regalo",
+    "celebration": "Celebración",
     "rsvp": "RSVP"
   },
   "rsvpForm": {
@@ -14,7 +16,18 @@
     "submit": "Enviar",
     "positiveSubmission": "Gracias por confirmar tu asistencia! 😊",
     "positiveSubmissionContent": "Aprovecha esta oportunidad para verificar el codigo de vestimenta, la ubicación y las listas de regalos.",
-    "negativeSubmission": "tt mmg 😔"
+    "negativeSubmission": "Lamentamos que no puedas asistir. 😔"
+  },
+  "celebration": {
+    "title": "Celebración",
+    "dateTitle": "Día",
+    "date": "Sábado 9 de Noviembre, 2024",
+    "saveTheDateButton": "Guardar Fecha",
+    "addressTitle": "Dirección",
+    "address": "Calle Mercedes #4, Zona Colonial, Santo Domingo",
+    "addressButton": "Ver Ubicación",
+    "locationTitle": "Lugar",
+    "location": "Círculo de Coleccionistas"
   },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",

@@ -2,6 +2,8 @@
   "nav": {
     "ourStory": "Our Story",
     "location": "Location",
+    "giftLists": "Gift Lists",
+    "celebration": "Celebration",
     "rsvp": "RSVP"
   },
   "rsvpForm": {
@@ -15,6 +17,18 @@
     "positiveSubmission": "Thank you for confirming your presence! 😊",
     "positiveSubmissionContent": "Please take some time to review the dress code, location and gift lists. We can't wait to see you there!",
     "negativeSubmission": "We're sorry to hear you will not be making it. 😔\n\nIf you would still like to share in our joy by contributing a gift, you can find our gift lists below. "
+  },
+  "celebration": {
+    "title": "Celebration",
+    "dateTitle": "Date",
+    "date": "Saturday November 9th, 2024",
+    "saveTheDateButton": "Save the Date",
+    "addressTitle": "Address",
+    "address": "Calle Mercedes #4, Zona Colonial, Santo Domingo",
+    "addressButton": "Get directions",
+    "locationTitle": "Location",
+    "location": "Círculo de Coleccionistas"
+    
   },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
