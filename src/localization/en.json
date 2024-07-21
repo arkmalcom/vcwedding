@@ -28,7 +28,9 @@
     "addressButton": "Get directions",
     "locationTitle": "Location",
     "location": "Círculo de Coleccionistas"
-    
+  },
+  "ourStory": {
+    "title": "Our Love"
   },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
