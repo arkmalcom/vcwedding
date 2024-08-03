@@ -5,7 +5,7 @@ const celebration = document.createElement("section");
 celebration.className = "section relative w-screen h-screen bg-orange-50";
 celebration.id = "celebration";
 celebration.innerHTML = `
-  <div class="flex w-screen h-screen flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">\
+  <div class="flex w-screen h-screen flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">
     <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-screen opacity-25" />
     <div id="countdown-section" class="flex flex-col justify-center items-center p-4 font-serif text-3xl text-amber-950 border-b-4 border-amber-950 bg-orange-100 z-20 lg:text-4xl w-screen">
       <h1 i18n-key="countdownTitle" class="text-amber-950 font-bold font-logo pb-2"></h1>
@@ -68,11 +68,6 @@ celebration.innerHTML = `
 //         <div class="flex flex-row">
 //           <a href="https://listaderegalos.casacuesta.com/Event/Malcom-SheylaLoraine" target="_blank" rel="noopener noreferrer">
 //             <button i18n-key="giftListWedding" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
-//           </a>
-//         </div>
-//         <div class="flex flex-row">
-//           <a href="#" target="_blank" rel="noopener noreferrer">
-//             <button i18n-key="recommendSong" class="fade-button opacity-0 py-1 h-20 w-64 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 uppercase font-black font-serif hover:text-amber-800 text-lg"></button>
 //           </a>
 //         </div>
 

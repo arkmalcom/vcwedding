@@ -3,6 +3,7 @@
     "ourStory": "Our Story",
     "location": "Location",
     "giftLists": "Gift Lists",
+    "party": "Party",
     "celebration": "Celebration",
     "rsvp": "RSVP"
   },
@@ -32,6 +33,15 @@
   "ourStory": {
     "title": "Our Love"
   },
+  "party": {
+    "title": "Party",
+    "musicHeader": "Music",
+    "musicContent": "We want to hear your favorite songs!\n\n Please share your suggestions with us and we may include them at the party.",
+    "recommendSong": "Recommend a Song",
+    "dressCodeHeader": "Dress Code",
+    "dressCodeContent": "We kindly ask that you review our dress code below.",
+    "dressCodeButton": "Dress Code"
+  },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
   "locationButton": "Get directions",
@@ -42,7 +52,6 @@
   "countdownTitle": "Countdown to the Big Day",
   "date": "November 9th, 2024",
   "dressCode": "Dress Code",
-  "recommendSong": "Recommend a Song",
   "giftListBachelorette": "Gift List (Despedida)",
   "giftListWedding": "Gift List (Wedding)"
 }

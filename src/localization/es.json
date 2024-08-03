@@ -4,6 +4,7 @@
     "location": "Ubicación",
     "giftLists": "Listas de Regalo",
     "celebration": "Celebración",
+    "party": "Fiesta",
     "rsvp": "RSVP"
   },
   "rsvpForm": {
@@ -32,6 +33,15 @@
   "ourStory": {
     "title": "Nuestro Amor"
   },
+  "party": {
+    "title": "Fiesta",
+    "musicHeader": "Música",
+    "musicContent": "Queremos escuchar tus canciones favoritas!\n\n Por favor comparte tus sugerencias con nosotros y podríamos incluirlas en la fiesta.",
+    "recommendSong": "Recomienda una Canción",
+    "dressCodeHeader": "Código de Vestimenta",
+    "dressCodeContent": "\nTe invitamos a revisar nuestro código de vestimenta.",
+    "dressCodeButton": "Código de Vestimenta"
+  },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",
   "saveTheDate": "Tenemos el gusto de invitarte a nuestra boda",
@@ -42,7 +52,6 @@
   "countdownTitle": "Faltan",
   "date": "9 de Noviembre, 2024",
   "dressCode": "Código de Vestimenta",
-  "recommendSong": "Recomienda una Canción",
   "giftListBachelorette": "Lista de Regalos (Despedida de Soltera)",
   "giftListWedding": "Lista de Regalos (Boda)"
 }

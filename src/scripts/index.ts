@@ -4,6 +4,7 @@ import landing from "./landing";
 import celebration from "./celebration";
 import ourStory from "./ourStory";
 import rsvpModal from "./components/rsvpModal";
+import party from "./party";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -16,9 +17,10 @@ navbar.innerHTML = `
         <div class="text-amber-50 text-2xl font-semibold font-logo text-2xl">M&S</div>
       </div>
       <ul class="hidden lg:flex space-x-4">
-        <li><a i18n-key="nav.ourStory" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
-        <li><a i18n-key="nav.giftLists" href="#" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
+        <li><a i18n-key="nav.ourStory" href="#our-story" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
+        <li><a i18n-key="nav.giftLists" href="#gift-lists" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
         <li><a i18n-key="nav.celebration" href="#celebration" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
+        <li><a i18n-key="nav.party" href="#party" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
         <li><a i18n-key="nav.location" href="https://www.google.com/maps/dir/?api=1&destination=18.475471,-69.886072" target="_blank" rel="noopener noreferrer" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
         <li><a href="#" class="rsvp text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2">RSVP</a></li>
       </ul>
@@ -27,11 +29,12 @@ navbar.innerHTML = `
       </button>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden flex-col space-y-1 items-center border-b-2 border-amber-700 bg-amber-950 w-full text-center absolute top-0 left-0 pt-12 pb-2 lg:hidden">
-    <a i18n-key="nav.ourStory" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
-    <a i18n-key="nav.giftLists" href="#" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
-    <a i18n-key="nav.celebration" href="#celebration" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
-    <a i18n-key="nav.location" href="https://www.google.com/maps/dir/?api=1&destination=18.475471,-69.886072" target="_blank" rel="noopener noreferrer" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 py-2"></a>
+  <div id="mobile-menu" class="hidden flex-col mt-2 space-y-1 items-center border-b-2 border-amber-700 bg-amber-950 w-full text-center absolute top-0 left-0 pt-12 pb-2 lg:hidden">
+    <a i18n-key="nav.ourStory" href="#our-story" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
+    <a i18n-key="nav.giftLists" href="#gift-lists" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
+    <a i18n-key="nav.celebration" href="#celebration" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
+    <a i18n-key="nav.party" href="#party" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
+    <a i18n-key="nav.location" href="https://www.google.com/maps/dir/?api=1&destination=18.475471,-69.886072" target="_blank" rel="noopener noreferrer" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
     <a href="#" class="rsvp block text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2 mt-2">RSVP</a>
   </div>
 `;
@@ -49,6 +52,7 @@ app.appendChild(langButton);
 app.appendChild(landing);
 app.appendChild(celebration);
 app.appendChild(ourStory);
+app.appendChild(party);
 
 updateContent();
 
