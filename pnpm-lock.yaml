@@ -14,6 +14,9 @@ dependencies:
   firebase:
     specifier: ^10.12.3
     version: 10.12.3
+  fslightbox:
+    specifier: ^3.4.1
+    version: 3.4.1
   i18next:
     specifier: ^23.11.5
     version: 23.11.5
@@ -1293,6 +1296,10 @@ packages:
     os: [darwin]
     requiresBuild: true
     optional: true
+
+  /fslightbox@3.4.1:
+    resolution: {integrity: sha512-/YkPP9jCnZMIlPuJPUo10JTCOCntU0vHeIKe0cB5ruR0ss2QCLhzxY5h24grZ2gUsF//0NXik7iGMU05RV/jcg==}
+    dev: false
 
   /function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}

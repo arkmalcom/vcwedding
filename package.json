@@ -16,6 +16,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "autoprefixer": "^10.4.19",
     "firebase": "^10.12.3",
+    "fslightbox": "^3.4.1",
     "i18next": "^23.11.5",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
