@@ -42,6 +42,15 @@
     "dressCodeContent": "We kindly ask that you review our dress code below.",
     "dressCodeButton": "Dress Code"
   },
+  "information": {
+    "noKidsHeader": "Adults only",
+    "noKidsContent": "In order for everyone to have a great time, we kindly ask that you make arrangements for your children.\n\n Thank you for understanding."
+  },
+  "dressCodeModal": {
+    "header": "Dress Code",
+    "content": "Formal\nFeel free to dress up and look your best!\n",
+    "importantNote": "White is reserved for the bride."
+  },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
   "locationButton": "Get directions",

@@ -17,7 +17,7 @@
     "submit": "Enviar",
     "positiveSubmission": "Gracias por confirmar tu asistencia! 😊",
     "positiveSubmissionContent": "Aprovecha esta oportunidad para verificar el codigo de vestimenta, la ubicación y las listas de regalos.",
-    "negativeSubmission": "Lamentamos que no puedas asistir. 😔"
+    "negativeSubmission": "Lamentamos que no puedas asistir. 😔\n\nPara nosotros tu presencia es lo más importante, pero si deseas contribuir a nuestras listas de regalos, las puedes encontrar aquí."
   },
   "celebration": {
     "title": "Celebración",
@@ -41,6 +41,15 @@
     "dressCodeHeader": "Código de Vestimenta",
     "dressCodeContent": "\nTe invitamos a revisar nuestro código de vestimenta.",
     "dressCodeButton": "Código de Vestimenta"
+  },
+  "information": {
+    "noKidsHeader": "Por favor, sin niños",
+    "noKidsContent": "En busca de una mejor experiencia para todos los presentes.\n\n Agradecemos su comprensión."
+  },
+  "dressCodeModal": {
+    "header": "Código de Vestimenta",
+    "content": "Formal\n¡Siéntete cómodo y elegante!\n",
+    "importantNote": "El blanco está reservado para la novia."
   },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",

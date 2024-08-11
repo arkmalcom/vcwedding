@@ -1,10 +1,12 @@
 import "../styles/style.css";
 import { changeLanguage, updateContent } from "./i18n/updateContent";
-import landing from "./landing";
 import celebration from "./celebration";
+import information from "./information";
+import landing from "./landing";
 import ourStory from "./ourStory";
-import rsvpModal from "./components/rsvpModal";
 import party from "./party";
+import rsvpModal from "./components/rsvpModal";
+import dressCodeModal from "./components/dressCodeModal";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -53,6 +55,7 @@ app.appendChild(landing);
 app.appendChild(celebration);
 app.appendChild(ourStory);
 app.appendChild(party);
+app.appendChild(information);
 
 updateContent();
 
@@ -89,8 +92,20 @@ document.addEventListener("DOMContentLoaded", () => {
 const rsvpButtonClass = document.querySelectorAll(".rsvp");
 if (rsvpButtonClass) {
   rsvpButtonClass.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
       app.appendChild(rsvpModal);
+      updateContent();
+    });
+  });
+}
+
+const dressCodeButtonClass = document.querySelectorAll(".dress-code");
+if (dressCodeButtonClass) {
+  dressCodeButtonClass.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      app.appendChild(dressCodeModal);
       updateContent();
     });
   });
