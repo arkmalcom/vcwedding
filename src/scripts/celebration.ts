@@ -38,21 +38,21 @@ celebration.innerHTML = `
           <p i18n-key="celebration.dateTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="celebration.date" class="text-amber-950"></p>
           <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NmE4NzV2ODI2YTlpbmdibTZhdW9jN2xpMHIgbWFsY29tLmNhbGl2YXJAb293bGlzaC5jb20&tmsrc=malcom.calivar%40oowlish.com" target="_blank" rel="noopener noreferrer">
-            <button i18n-key="celebration.saveTheDateButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-800 text-base"></button>
+            <button i18n-key="celebration.saveTheDateButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base"></button>
           </a>
         </div>
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="celebration.addressTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="celebration.address" class="text-amber-950 text-sm"></p>
           <a href="https://www.google.com/maps/dir/?api=1&destination=18.475471,-69.886072" target="_blank" rel="noopener noreferrer">
-            <button i18n-key="celebration.addressButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-800 text-base"></button>
+            <button i18n-key="celebration.addressButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base"></button>
           </a>
         </div>
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="celebration.locationTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="celebration.location" class="text-amber-950"></p>
           <a href="#">
-            <button class="fade-button rsvp opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-800 text-base">RSVP</button>
+            <button class="fade-button rsvp opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base">RSVP</button>
           </a>
         </div>
       </div>

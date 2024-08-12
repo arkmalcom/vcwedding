@@ -17,10 +17,12 @@ footer.innerHTML = `
         <h1 i18n-key="footer.socialHashtag" class="text-2xl font-bold font-serif text-lime-600 pb-4"></h1>
       </div>
     </div>
-    <a href="https://listaderegalos.casacuesta.com/Event/SheylaLoraine-and-Malcom?utm_source=share" target="_blank" rel="noopener noreferrer">
-        <button i18n-key="footer.socialLink" class="mt-24 lg:mt-56 w-auto h-auto rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
+    <div class="mt-24 lg:mt-52 w-auto h-auto z-20">
+    <a href="https://www.instagram.com/explore/tags/malcomysheyla/" target="_blank" rel="noopener noreferrer">
+        <button i18n-key="footer.socialLink" class="rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
     </a>
-    <div class="flex flex-col bg-amber-800 z-10 w-screen h-auto border-t-2 border-amber-900 flex-grow mt-4 py-4 items-center">
+    </div>
+    <div class="flex flex-col bg-amber-800 z-10 w-screen h-auto border-t-2 border-amber-900 flex-grow mt-8 py-4 items-center">
         <h1 i18n-key="footer.names" class="text-amber-50 lg:text-4xl text-3xl p-2 font-bold font-logo"></h1>
         <div class="border-t-2 border-amber-50 w-full my-2"></div>
         <p i18n-key="footer.goodbye" class="text-amber-50 p-4 font-stylized text-3xl"></p>
