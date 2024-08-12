@@ -14,7 +14,7 @@ party.innerHTML = `
     </div>
     <div class="flex flex-col lg:space-y-12 space-y-6 pt-4 w-screen justify-center items-center">
     <div class="relative flex flex-col w-full h-80 justify-start items-center z-10 p-2">
-      <img src="${flowerBorder1}" alt="flower border" class="absolute w-full h-56 -bottom-2 -left-24 rotate-12 object-contain z-20 rounded-lg pointer-events-none" />
+      <img src="${flowerBorder1}" alt="flower border" class="absolute w-full scale-50 -bottom-28 -left-24 rotate-12 object-contain z-20 rounded-lg pointer-events-none" />
       <div class="relative flex flex-col rounded-lg shadow-md bg-amber-50 w-80 h-72 justify-start items-center p-2 z-10">
           <p i18n-key="party.musicHeader" class="text-amber-950 text-3xl p-2 font-semibold font-stylized"></p>
           <p i18n-key="party.musicContent" class="text-amber-950 text-sm text-base p-2 pb-10"></p>
@@ -24,7 +24,7 @@ party.innerHTML = `
       </div>
     </div>
     <div class="relative flex flex-col w-full h-80 justify-start items-center z-10 p-2">
-      <img src="${flowerBorder1}" alt="flower border" class="absolute w-full h-56 -bottom-2 -left-24 rotate-12 object-contain z-20 rounded-lg pointer-events-none" />
+      <img src="${flowerBorder1}" alt="flower border" class="absolute w-full scale-50 -bottom-28 -left-24 rotate-12 object-contain z-20 rounded-lg pointer-events-none" />
       <div class="flex flex-col rounded-lg shadow-md bg-amber-50 w-80 h-72 justify-start items-center z-10 p-2">
           <p i18n-key="party.dressCodeHeader" class="text-amber-950 text-3xl p-2 font-semibold font-stylized"></p>
           <p i18n-key="party.dressCodeContent" class="text-amber-950 text-sm text-base p-2"></p>

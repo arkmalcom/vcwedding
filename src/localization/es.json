@@ -44,7 +44,13 @@
   },
   "information": {
     "noKidsHeader": "Por favor, sin niños",
-    "noKidsContent": "En busca de una mejor experiencia para todos los presentes.\n\n Agradecemos su comprensión."
+    "noKidsContent": "En busca de una mejor experiencia para todos los presentes.\n\n Agradecemos su comprensión.",
+    "giftListsHeader": "Listas de Regalos",
+    "giftListsContent": "Para nosotros tu presencia es lo más importante, pero si deseas contribuir a nuestras listas de regalos, las puedes encontrar aquí.",
+    "bacheloretteList": "Despedida de Soltera",
+    "weddingList": "Boda",
+    "bankInfoHeader": "Cuenta Bancaria",
+    "bankInfoContent": "Si prefieres hacer una transferencia bancaria, puedes hacerlo a la siguiente cuenta:\n\n111111111 - Banco de Reservas"
   },
   "dressCodeModal": {
     "header": "Código de Vestimenta",

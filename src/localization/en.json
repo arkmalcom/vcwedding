@@ -37,18 +37,24 @@
     "title": "Party",
     "musicHeader": "Music",
     "musicContent": "We want to hear your favorite songs!\n\n Please share your suggestions with us and we may include them at the party.",
-    "recommendSong": "Recommend a Song",
+    "recommendSong": "Request a Song",
     "dressCodeHeader": "Dress Code",
     "dressCodeContent": "We kindly ask that you review our dress code below.",
     "dressCodeButton": "Dress Code"
   },
   "information": {
     "noKidsHeader": "Adults only",
-    "noKidsContent": "In order for everyone to have a great time, we kindly ask that you make arrangements for your children.\n\n Thank you for understanding."
+    "noKidsContent": "In order for everyone to have a great time, we kindly ask that you make arrangements for your children.\n\n Thank you for understanding.",
+    "giftListsHeader": "Gift Lists",
+    "giftListsContent": "Your presence is the best gift we could ask for, but if you would like to contribute to our gift lists, you can find them below.",
+    "bacheloretteList": "Bachelorette Party",
+    "weddingList": "Wedding",
+    "bankInfoHeader": "Bank Account",
+    "bankInfoContent": "If you prefer to make a bank transfer, you can do so to the following account:\n\n111111111 - Banco de Reservas"
   },
   "dressCodeModal": {
     "header": "Dress Code",
-    "content": "Formal\nFeel free to dress up and look your best!\n",
+    "content": "Formal\nDress comfortable but elegant!\n",
     "importantNote": "White is reserved for the bride."
   },
   "title": "Wedding",
