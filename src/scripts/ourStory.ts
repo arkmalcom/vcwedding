@@ -18,26 +18,37 @@ ourStory.innerHTML = `
         <p i18n-key="ourStory.title" class="font-logo text-4xl p-2 text-amber-900 font-bold"></p>
         <div class="border-b border-2 border-amber-900 lg:w-96 w-2/3"></div>
     </div>
-    <div class="container mx-auto mt-10">
-      <div class="relative w-full overflow-hidden">
-        <div class="flex items-center justify-center space-x-4">
-          <a href="${pic2}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105">
-            <img src="${pic2}" alt="gallery image" class="lg:block hidden max-w-full border-amber-50 border-4 h-auto rounded-lg shadow-md" />
-          </a>
-          <a href="${pic1}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105">
-            <img src="${pic1}" alt="gallery image" class="max-w-full border-amber-50 border-4 h-auto rounded-lg shadow-md" />
-          </a>
-          <a href="${pic3}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105">
-            <img src="${pic3}" alt="gallery image" class="lg:block hidden max-w-full border-amber-50 border-4 h-auto rounded-lg shadow-md" />
-          </a>
-          <a href="${pic4}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105">
-          </a>
-          <a href="${pic5}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105">
-          </a>
-        </div>
+    <p i18n-key="ourStory.content" class="text-amber-900 p-2 py-10 font-serif"></p>
+  <div class="relative w-screen overflow-hidden">
+  <div class="flex lg:flex-row flex-col items-center justify-center space-x-2 lg:space-x-6 lg:pt-3">
+    <a href="${pic2}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
+      <div class="bg-black p-1 border-amber-50 border-4 rounded-lg">
+        <img src="${pic2}" alt="gallery image" class="w-full h-auto rounded-lg" />
       </div>
-    </div>
+    </a>
+    <a href="${pic5}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
+      <div class="bg-black p-1 border-amber-50 border-4 rounded-lg">
+        <img src="${pic5}" alt="gallery image" class="w-full h-auto rounded-lg" />
+      </div>
+    </a>
+    <a href="${pic1}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-1 max-w-3xl">
+      <div class="bg-black p-1 border-amber-50 border-4 rounded-lg">
+        <img src="${pic1}" alt="gallery image" class="w-full h-auto rounded-lg" />
+      </div>
+    </a>
+    <a href="${pic4}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
+      <div class="bg-black p-1 border-amber-50 border-4 rounded-lg">
+        <img src="${pic4}" alt="gallery image" class="w-full h-auto rounded-lg" />
+      </div>
+    </a>
+    <a href="${pic4}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
+      <div class="bg-black p-1 border-amber-50 border-4 rounded-lg">
+        <img src="${pic4}" alt="gallery image" class="w-full h-auto rounded-lg" />
+      </div>
+    </a>
   </div>
+</div>
+
 `;
 
 document.body.appendChild(ourStory);

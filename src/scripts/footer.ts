@@ -14,7 +14,7 @@ footer.innerHTML = `
     <div class="relative flex flex-col pt-4 w-full justify-center items-center">
       <img src="${leafHeart}" alt="leaf heart" class="absolute max-lg:w-full lg:w-1/3 z-10 rounded-lg pointer-events-none" />
       <div class="flex flex-col justify-center items-center rounded-full w-40 h-40">
-        <h1 i18n-key="footer.socialHashtag" class="text-2xl font-bold font-serif text-lime-600 pb-4"></h1>
+        <h1 i18n-key="footer.socialHashtag" class="text-2xl font-bold font-serif text-transparent bg-clip-text bg-gradient-to-r from-lime-600 via-lime-700 to-lime-800 pb-4"></h1>
       </div>
     </div>
     <div class="mt-24 lg:mt-52 w-auto h-auto z-20">
