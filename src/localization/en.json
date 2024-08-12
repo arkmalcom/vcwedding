@@ -58,6 +58,14 @@
     "content": "Formal\nDress comfortable but elegant!\n",
     "importantNote": "White is reserved for the bride."
   },
+  "footer": {
+    "header": "We hope you'll join us on our special day!",
+    "content": "Please share your favorite moments with us on social media using the hashtag below",
+    "socialHashtag": "#malcomysheyla",
+    "socialLink": "View on Instagram",
+    "names": "Malcom & Sheyla",
+    "goodbye": "See you there!"
+  },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
   "locationButton": "Get directions",
