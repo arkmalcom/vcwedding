@@ -1,6 +1,7 @@
 import "../styles/style.css";
 import { changeLanguage, updateContent } from "./i18n/updateContent";
 import celebration from "./celebration";
+import footer from "./footer";
 import information from "./information";
 import landing from "./landing";
 import ourStory from "./ourStory";
@@ -56,6 +57,7 @@ app.appendChild(celebration);
 app.appendChild(ourStory);
 app.appendChild(party);
 app.appendChild(information);
+app.appendChild(footer);
 
 updateContent();
 

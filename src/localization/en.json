@@ -50,7 +50,8 @@
     "bacheloretteList": "Bachelorette Party",
     "weddingList": "Wedding",
     "bankInfoHeader": "Bank Account",
-    "bankInfoContent": "If you prefer to make a bank transfer, you can do so to the following account:\n\n111111111 - Banco de Reservas"
+    "bankInfoContent": "If you prefer to make a bank transfer, you can find our account information below.",
+    "bankInfoButton": "Bank Information"
   },
   "dressCodeModal": {
     "header": "Dress Code",

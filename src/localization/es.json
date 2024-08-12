@@ -50,12 +50,21 @@
     "bacheloretteList": "Despedida de Soltera",
     "weddingList": "Boda",
     "bankInfoHeader": "Cuenta Bancaria",
-    "bankInfoContent": "Si prefieres hacer una transferencia bancaria, puedes hacerlo a la siguiente cuenta:\n\n111111111 - Banco de Reservas"
+    "bankInfoContent": "Si prefieres hacer una transferencia bancaria, puedes encontrar nuestra información bancaria aquí.",
+    "bankInfoButton": "Información Bancaria"
   },
   "dressCodeModal": {
     "header": "Código de Vestimenta",
     "content": "Formal\n¡Siéntete cómodo y elegante!\n",
     "importantNote": "El blanco está reservado para la novia."
+  },
+  "footer": {
+    "header": "Te esperamos para disfrutar de este día tan especial juntos.",
+    "content": "Puedes compartir tus fotos y videos con nosotros en las redes sociales",
+    "socialHashtag": "#malcomysheyla",
+    "socialLink": "Ver en Instagram",
+    "names": "Malcom y Sheyla",
+    "goodbye": "¡Te esperamos!"
   },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",
