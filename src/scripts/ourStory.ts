@@ -3,7 +3,6 @@ import "fslightbox";
 import watercolorBg from "../assets/watercolor-bg.jpg";
 import pic1 from "../assets/gallery/pic1.jpg";
 import pic2 from "../assets/gallery/pic2.jpg";
-import pic3 from "../assets/gallery/pic3.jpg";
 import pic4 from "../assets/gallery/pic4.jpg";
 import pic5 from "../assets/gallery/pic5.jpg";
 
