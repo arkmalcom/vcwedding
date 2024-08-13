@@ -5,13 +5,13 @@ const footer = document.createElement("section");
 footer.className = "section relative w-screen h-screen bg-orange-50";
 footer.id = "footer";
 footer.innerHTML = `
-  <div class="flex w-screen h-screen flex-col items-center justify-start">
-    <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-screen opacity-25" />
-    <div class="flex flex-col space-y-1 pt-4 w-screen h-80 justify-start items-center text-center">
+  <div class="flex w-screen h-full flex-col items-center justify-start">
+    <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-full opacity-25" />
+    <div class="flex flex-col space-y-1 pt-4 w-screen h-80 justify-start items-center text-center lg:mt-8">
         <h1 i18n-key="footer.header" class="text-amber-950 text-4xl p-2 font-bold font-logo"></h1>
         <p i18n-key="footer.content" class="text-amber-950 p-2 font-serif"></p>
     </div>
-    <div class="relative flex flex-col pt-4 w-full justify-center items-center">
+    <div class="relative flex flex-col pt-4 md:pt-24 w-full justify-center items-center">
       <img src="${leafHeart}" alt="leaf heart" class="absolute max-lg:w-full lg:w-1/3 z-10 rounded-lg pointer-events-none" />
       <div class="flex flex-col justify-center items-center rounded-full w-40 h-40">
         <h1 i18n-key="footer.socialHashtag" class="text-2xl font-bold font-serif text-transparent bg-clip-text bg-gradient-to-r from-lime-600 via-lime-700 to-lime-800 pb-4"></h1>

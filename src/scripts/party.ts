@@ -2,11 +2,11 @@ import watercolorBg from "../assets/watercolor-bg.jpg";
 import flowerBorder1 from "../assets/flower-border-1.png";
 
 const party = document.createElement("section");
-party.className = "section relative w-screen h-screen";
+party.className = "section relative w-screen h-full";
 party.id = "party";
 party.innerHTML = `
-  <div class="flex w-screen h-screen flex-col items-center justify-start border-b-4 border-amber-950 lg:space-y-8 space-y-2">
-    <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-screen opacity-25" />
+  <div class="flex w-screen h-full flex-col items-center justify-start border-b-4 border-amber-950 lg:space-y-8 space-y-2">
+    <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-full opacity-25" />
     <div class="flex flex-col space-y-1 pt-4 w-screen justify-center items-center">
       <div class="border-t border-2 border-amber-900 lg:w-96 w-2/3"></div>
       <p i18n-key="party.title" class="font-logo text-4xl p-2 text-amber-900 font-bold"></p>

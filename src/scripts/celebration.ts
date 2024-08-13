@@ -2,11 +2,11 @@ import CountdownTimer from "./components/countdownTimer";
 import watercolorBg from "../assets/watercolor-bg.jpg";
 
 const celebration = document.createElement("section");
-celebration.className = "section relative w-screen h-screen bg-orange-50";
+celebration.className = "section relative w-screen h-full bg-orange-50";
 celebration.id = "celebration";
 celebration.innerHTML = `
-  <div class="flex w-screen h-screen flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">
-    <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-screen opacity-25" />
+  <div class="flex w-screen h-full flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">
+    <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-full opacity-25" />
     <div id="countdown-section" class="flex flex-col justify-center items-center p-4 font-serif text-3xl text-amber-950 border-b-4 border-amber-950 bg-orange-100 z-20 lg:text-4xl w-screen">
       <h1 i18n-key="countdownTitle" class="text-amber-950 font-bold font-logo pb-2"></h1>
       <div class="flex flex-row justify-center items-center space-x-6 lg:space-x-4 mb-4">
@@ -33,7 +33,7 @@ celebration.innerHTML = `
         <p i18n-key="celebration.title" class="font-logo text-4xl p-2 text-amber-900 font-bold"></p>
         <div class="border-b border-2 border-amber-900 lg:w-96 w-2/3"></div>
       </div>
-      <div class="flex flex-col py-4 z-10 h-screen items-center justify-center">
+      <div class="flex flex-col py-4 z-10 h-full items-center justify-center">
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="celebration.dateTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="celebration.date" class="text-amber-950"></p>
