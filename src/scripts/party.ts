@@ -26,13 +26,13 @@ party.innerHTML = `
     </div>
     <div class="relative flex flex-col w-auto h-80 justify-start items-center z-10 p-2">
       <img src="${flowerBorder1}" alt="flower border" class="absolute max-lg:scale-50 lg:h-56 lg:w-56 -left-12 -bottom-10 max-lg:-bottom-24 max-lg:-left-24 rotate-12 object-contain z-20 rounded-lg pointer-events-none" />
-      <div class="flex flex-col rounded-lg shadow-md bg-amber-50 w-80 h-72 justify-between items-center z-10 p-2 text-center">
+      <div class="flex flex-col rounded-lg shadow-md bg-amber-50 w-80 h-72 justify-start items-center z-10 p-2 text-center">
+        <div class="p-4 m-4 border-2 border-amber-700 h-64">
           <p i18n-key="party.dressCodeHeader" class="text-amber-950 text-3xl p-2 font-semibold font-stylized"></p>
-          <p i18n-key="party.dressCodeContent" class="text-amber-950 text-sm text-base p-2"></p>
-          <div class="flex-grow"></div>
-          <a href="#">
-              <button i18n-key="party.dressCodeButton" class="mb-4 dress-code fade-button opacity-0 h-auto w-64 lg:w-72 rounded-md border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-100 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
-          </a>
+          <p i18n-key="party.dressCodeSubheader" class="text-amber-950 text-3xl p-2 font-logo"></p>
+          <p i18n-key="party.dressCodeContent" class="text-amber-950 text-base p-2"></p>
+          <p i18n-key="party.dressCodeNote" class="text-amber-950 text-base p-2 font-bold"></p>
+        <div>
       </div>
     </div>
     </div>

@@ -28,7 +28,8 @@
     "address": "Calle Mercedes #4, Zona Colonial, Santo Domingo",
     "addressButton": "Get directions",
     "locationTitle": "Location",
-    "location": "Círculo de Coleccionistas"
+    "location": "Círculo de Coleccionistas",
+    "countdownTitle": "Countdown to the Big Day"
   },
   "ourStory": {
     "title": "Our Love"
@@ -39,8 +40,9 @@
     "musicContent": "We want to hear your favorite songs!\n\n Please share your suggestions with us and we may include them at the party.",
     "recommendSong": "Request a Song",
     "dressCodeHeader": "Dress Code",
-    "dressCodeContent": "We kindly ask that you review our dress code below.",
-    "dressCodeButton": "Dress Code"
+    "dressCodeSubheader": "Formal",
+    "dressCodeContent": "Dress comfortable but elegant!",
+    "dressCodeNote": "White is reserved for the bride."
   },
   "information": {
     "noKidsHeader": "Adults only",
@@ -53,11 +55,6 @@
     "bankInfoContent": "If you prefer to make a bank transfer, you can find our account information below.",
     "bankInfoButton": "Bank Information"
   },
-  "dressCodeModal": {
-    "header": "Dress Code",
-    "content": "Formal\nDress comfortable but elegant!\n",
-    "importantNote": "White is reserved for the bride."
-  },
   "footer": {
     "header": "We hope you'll join us on our special day!",
     "content": "Please share your favorite moments with us on social media using the hashtag below",
@@ -69,11 +66,11 @@
   "title": "Wedding",
   "saveTheDate": "Save the Date",
   "locationButton": "Get directions",
+  "countdownTitle": "See you soon!",
   "days": "Days",
   "hours": "Hrs.",
   "minutes": "Min.",
   "seconds": "Sec.",
-  "countdownTitle": "Countdown to the Big Day",
   "date": "November 9th, 2024",
   "dressCode": "Dress Code",
   "giftListBachelorette": "Gift List (Despedida)",

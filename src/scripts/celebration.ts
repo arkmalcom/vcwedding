@@ -52,7 +52,7 @@ celebration.innerHTML = `
           <p i18n-key="celebration.locationTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="celebration.location" class="text-amber-950"></p>
           <a href="#">
-            <button class="fade-button rsvp opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base">RSVP</button>
+            <button class="fade-button rsvp opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base" data-source="wedding">RSVP</button>
           </a>
         </div>
       </div>

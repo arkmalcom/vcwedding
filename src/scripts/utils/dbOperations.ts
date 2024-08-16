@@ -6,6 +6,7 @@ async function addRSVP(
   email: string,
   isAttending: boolean,
   invitedBy: string,
+  source: string,
   plusOneName?: string,
   plusOneEmail?: string,
   isPlusOneAttending?: boolean,
@@ -18,6 +19,7 @@ async function addRSVP(
     plus_one_name: "",
     plus_one_email: "",
     is_plus_one_attending: false,
+    source,
   };
 
   if (plusOneName && plusOneEmail && isPlusOneAttending !== undefined) {

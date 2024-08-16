@@ -28,7 +28,8 @@
     "address": "Calle Mercedes #4, Zona Colonial, Santo Domingo",
     "addressButton": "Ver Ubicación",
     "locationTitle": "Lugar",
-    "location": "Círculo de Coleccionistas"
+    "location": "Círculo de Coleccionistas",
+    "countdownTitle": "Faltan"
   },
   "ourStory": {
     "title": "Nuestro Amor",
@@ -40,8 +41,9 @@
     "musicContent": "Queremos escuchar tus canciones favoritas!\n\n Por favor comparte tus sugerencias con nosotros y podríamos incluirlas en la fiesta.",
     "recommendSong": "Recomienda una Canción",
     "dressCodeHeader": "Código de Vestimenta",
-    "dressCodeContent": "\nTe invitamos a revisar nuestro código de vestimenta.",
-    "dressCodeButton": "Código de Vestimenta"
+    "dressCodeSubheader": "Formal",
+    "dressCodeContent": "¡Siéntete cómodo y elegante!",
+    "dressCodeNote": "El blanco está reservado para la novia."
   },
   "information": {
     "noKidsHeader": "Por favor, sin niños",
@@ -54,11 +56,6 @@
     "bankInfoContent": "Si prefieres hacer una transferencia bancaria, puedes encontrar nuestra información bancaria aquí.",
     "bankInfoButton": "Información Bancaria"
   },
-  "dressCodeModal": {
-    "header": "Código de Vestimenta",
-    "content": "Formal\n¡Siéntete cómodo y elegante!\n",
-    "importantNote": "El blanco está reservado para la novia."
-  },
   "footer": {
     "header": "Te esperamos para disfrutar de este día tan especial juntos.",
     "content": "Puedes compartir tus fotos y videos con nosotros en las redes sociales",
@@ -67,14 +64,25 @@
     "names": "Malcom y Sheyla",
     "goodbye": "¡Te esperamos!"
   },
+  "bachelorette": {
+    "title": "Despedida de Soltera",
+    "dateTitle": "Día",
+    "date": "Sábado 26 de Octubre, 2024",
+    "saveTheDateButton": "Guardar Fecha",
+    "addressTitle": "Dirección",
+    "address": "Calle 1ra #2, Santo Domingo Este",
+    "addressButton": "Ver Ubicación",
+    "locationTitle": "Lugar",
+    "location": "Centro Educativo Villa de Angeles"
+  },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",
   "saveTheDate": "Tenemos el gusto de invitarte a nuestra boda",
+  "countdownTitle": "Faltan",
   "days": "Días",
   "hours": "Hs.",
   "minutes": "Min.",
   "seconds": "Seg.",
-  "countdownTitle": "Faltan",
   "date": "9 de Noviembre, 2024",
   "dressCode": "Código de Vestimenta",
   "giftListBachelorette": "Lista de Regalos (Despedida de Soltera)",

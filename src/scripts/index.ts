@@ -1,5 +1,6 @@
 import "../styles/style.css";
 import { changeLanguage, updateContent } from "./i18n/updateContent";
+import bachelorette from "./bachelorette";
 import celebration from "./celebration";
 import footer from "./footer";
 import information from "./information";
@@ -7,7 +8,6 @@ import landing from "./landing";
 import ourStory from "./ourStory";
 import party from "./party";
 import rsvpModal from "./components/rsvpModal";
-import dressCodeModal from "./components/dressCodeModal";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -44,7 +44,7 @@ navbar.innerHTML = `
 
 const langButton = document.createElement("button");
 langButton.className =
-  "lang-button flex items-center justify-center p-1 rounded-lg shadow-md fixed bottom-4 left-4 w-10 h-10 z-30";
+  "lang-button flex items-center justify-center p-1 rounded-lg shadow-md fixed bottom-2 left-4 w-10 h-10 z-50";
 langButton.id = "lang-button";
 langButton.innerHTML = `
   <span class="fi fi-us w-12 h-12"></span>
@@ -54,6 +54,7 @@ app.appendChild(navbar);
 app.appendChild(langButton);
 app.appendChild(landing);
 app.appendChild(celebration);
+app.appendChild(bachelorette);
 app.appendChild(ourStory);
 app.appendChild(party);
 app.appendChild(information);
@@ -98,17 +99,20 @@ if (rsvpButtonClass) {
       event.preventDefault();
       app.appendChild(rsvpModal);
       updateContent();
-    });
-  });
-}
 
-const dressCodeButtonClass = document.querySelectorAll(".dress-code");
-if (dressCodeButtonClass) {
-  dressCodeButtonClass.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      app.appendChild(dressCodeModal);
-      updateContent();
+      const source = button.getAttribute("data-source");
+
+      const rsvpForm = rsvpModal.querySelector("#rsvp-form")!;
+      let sourceInput = rsvpForm.querySelector(
+        'input[name="source"]',
+      ) as HTMLInputElement | null;
+      if (!sourceInput) {
+        sourceInput = document.createElement("input");
+        sourceInput.type = "hidden";
+        sourceInput.name = "source";
+        rsvpForm.appendChild(sourceInput);
+      }
+      sourceInput.value = source!;
     });
   });
 }

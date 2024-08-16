@@ -10,7 +10,7 @@ information.innerHTML = `
   <div class="relative flex flex-col w-auto h-80 justify-start items-center z-10 p-2">
     <img src="${flowerBorder1}" alt="flower border" class="absolute max-lg:scale-50 lg:h-56 lg:w-56 -top-8 -left-12 max-lg:-top-24 max-lg:-left-24 rotate-90 object-contain z-20 rounded-lg pointer-events-none" />
     <div class="flex flex-col rounded-lg shadow-md bg-amber-50 w-80 h-64 justify-center items-center text-center z-10 p-2">
-        <div class="p-4 m-4 border-2 border-amber-800 h-64">
+        <div class="p-4 m-4 border-2 border-amber-700 h-64">
             <p i18n-key="information.noKidsHeader" class="text-amber-950 text-3xl p-2 py-4 font-semibold font-stylized"></p>
             <p i18n-key="information.noKidsContent" class="text-amber-950 text-sm text-base p-2"></p>
         </div>

@@ -135,6 +135,9 @@ rsvpForm.addEventListener("submit", async (event) => {
       'input[name="plus-one-attending"]:checked',
     ) as HTMLInputElement
   )?.value;
+  const source = (
+    rsvpForm.querySelector('input[name="source"]') as HTMLInputElement
+  ).value;
 
   if (stage === "prod") {
     await addRSVP(
@@ -142,6 +145,7 @@ rsvpForm.addEventListener("submit", async (event) => {
       email,
       isAttending === "yes",
       invitedBy,
+      source,
       plusOneName,
       plusOneEmail,
       isPlusOneAttending === "yes",
