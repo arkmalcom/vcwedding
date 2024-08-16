@@ -20,7 +20,7 @@ landing.innerHTML = `
         <p i18n-key="date" class="text-amber-800 lg:text-4xl text-base uppercase font-semibold font-serif"></p>
       </div>
       <div class="lg:py-8 py-4">
-        <a href="#" class="rsvp text-amber-950 uppercase font-semibold font-stylized hover:text-amber-600 hover:border-amber-600 border-2 border-amber-950 p-2">RSVP</a>
+        <a href="#" class="rsvp text-amber-950 uppercase font-semibold font-stylized hover:text-amber-600 hover:border-amber-600 border-2 border-amber-950 p-2" data-source="wedding">RSVP</a>
       </div>
       <div class="relative top-4">
         <i class="fas fa-chevron-down down-arrow bottom-0 text-amber-950 lg:text-4xl text-2xl"></i>
