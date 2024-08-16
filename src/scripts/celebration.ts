@@ -37,7 +37,7 @@ celebration.innerHTML = `
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="celebration.dateTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="celebration.date" class="text-amber-950"></p>
-          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NmE4NzV2ODI2YTlpbmdibTZhdW9jN2xpMHIgbWFsY29tLmNhbGl2YXJAb293bGlzaC5jb20&tmsrc=malcom.calivar%40oowlish.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTFqanJiODJwNGFyNGU1c2RwOHAybm1kOGMgZTk3NThjMmNkMDRkZDU5ODQzNWM5NWZjOGIyMmZmMzkzYjZhZmY3ZTY5Yjk1ZWY2NjNlMzllYTc1M2U3MmQyZEBn&tmsrc=e9758c2cd04dd598435c95fc8b22ff393b6aff7e69b95ef663e39ea753e72d2d%40group.calendar.google.com" target="_blank" rel="noopener noreferrer">
             <button i18n-key="celebration.saveTheDateButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base"></button>
           </a>
         </div>
