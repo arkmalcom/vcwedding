@@ -7,12 +7,9 @@ import pic3 from "../assets/gallery/pic3.jpeg";
 import pic4 from "../assets/gallery/pic4.jpeg";
 import pic5 from "../assets/gallery/pic5.jpeg";
 import pic6 from "../assets/gallery/pic6.jpeg";
-import pic7 from "../assets/gallery/pic7.jpeg";
 import pic8 from "../assets/gallery/pic8.jpeg";
-import pic9 from "../assets/gallery/pic9.jpeg";
 import pic10 from "../assets/gallery/pic10.jpeg";
 import pic11 from "../assets/gallery/pic11.jpeg";
-import pic12 from "../assets/gallery/pic12.jpeg";
 import pic13 from "../assets/gallery/pic13.jpeg";
 import pic14 from "../assets/gallery/pic14.jpeg";
 import pic15 from "../assets/gallery/pic15.jpeg";
@@ -46,9 +43,9 @@ ourStory.innerHTML = `
         <img src="${pic14}" alt="gallery image" class="w-full h-auto rounded-lg" />
       </div>
     </a>
-    <a href="${pic12}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
+    <a href="${pic11}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
       <div class="bg-black p-1 border-amber-50 border-4 rounded-lg">
-        <img src="${pic12}" alt="gallery image" class="w-full h-auto rounded-lg" />
+        <img src="${pic11}" alt="gallery image" class="w-full h-auto rounded-lg" />
       </div>
     </a>
     <a href="${pic6}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
@@ -60,11 +57,8 @@ ourStory.innerHTML = `
   <a href="${pic1}" data-fslightbox="gallery"></a>
   <a href="${pic4}" data-fslightbox="gallery"></a>
   <a href="${pic5}" data-fslightbox="gallery"></a>
-  <a href="${pic7}" data-fslightbox="gallery"></a>
   <a href="${pic8}" data-fslightbox="gallery"></a>
-  <a href="${pic9}" data-fslightbox="gallery"></a>
   <a href="${pic10}" data-fslightbox="gallery"></a>
-  <a href="${pic11}" data-fslightbox="gallery"></a>
   <a href="${pic13}" data-fslightbox="gallery"></a>
   <a href="${pic15}" data-fslightbox="gallery"></a>
 </div>
