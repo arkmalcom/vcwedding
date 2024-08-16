@@ -28,9 +28,9 @@ ourStory.innerHTML = `
         <p i18n-key="ourStory.title" class="font-logo text-4xl p-2 text-amber-900 font-bold"></p>
         <div class="border-b border-2 border-amber-900 lg:w-96 w-2/3"></div>
     </div>
-    <p i18n-key="ourStory.content" class="text-amber-900 p-2 py-4 font-serif"></p>
+    <p i18n-key="ourStory.content" class="text-amber-900 p-2 lg:py-4 py-6 font-serif"></p>
   <div class="relative w-screen overflow-hidden">
-  <div class="flex lg:flex-row flex-col max-lg:space-y-2 items-center justify-center space-x-2 lg:space-x-6 mb-6">
+  <div class="flex lg:flex-row flex-col max-lg:space-y-2 items-center justify-center space-x-2 lg:space-x-6 lg:my-6 my-2">
     <a href="${pic2}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
       <div class="lg:block hidden bg-black p-1 border-amber-50 border-4 rounded-lg">
         <img src="${pic2}" alt="gallery image" class="w-full h-auto rounded-lg" />
@@ -56,16 +56,17 @@ ourStory.innerHTML = `
         <img src="${pic6}" alt="gallery image" class="w-full h-auto rounded-lg" />
       </div>
     </a>
-    <a href="${pic1}" data-fslightbox="gallery"></a>
-    <a href="${pic4}" data-fslightbox="gallery"></a>
-    <a href="${pic5}" data-fslightbox="gallery"></a>
-    <a href="${pic7}" data-fslightbox="gallery"></a>
-    <a href="${pic8}" data-fslightbox="gallery"></a>
-    <a href="${pic9}" data-fslightbox="gallery"></a>
-    <a href="${pic10}" data-fslightbox="gallery"></a>
-    <a href="${pic11}" data-fslightbox="gallery"></a>
-    <a href="${pic13}" data-fslightbox="gallery"></a>
   </div>
+  <a href="${pic1}" data-fslightbox="gallery"></a>
+  <a href="${pic4}" data-fslightbox="gallery"></a>
+  <a href="${pic5}" data-fslightbox="gallery"></a>
+  <a href="${pic7}" data-fslightbox="gallery"></a>
+  <a href="${pic8}" data-fslightbox="gallery"></a>
+  <a href="${pic9}" data-fslightbox="gallery"></a>
+  <a href="${pic10}" data-fslightbox="gallery"></a>
+  <a href="${pic11}" data-fslightbox="gallery"></a>
+  <a href="${pic13}" data-fslightbox="gallery"></a>
+  <a href="${pic15}" data-fslightbox="gallery"></a>
 </div>
 
 `;

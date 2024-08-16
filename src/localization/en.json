@@ -32,7 +32,8 @@
     "countdownTitle": "Countdown to the Big Day"
   },
   "ourStory": {
-    "title": "Our Love"
+    "title": "Our Love",
+    "content": "Portraits of our love"
   },
   "party": {
     "title": "Party",
@@ -62,6 +63,17 @@
     "socialLink": "View on Instagram",
     "names": "Malcom & Sheyla",
     "goodbye": "See you there!"
+  },
+  "bachelorette": {
+    "title": "Bachelorette Party",
+    "dateTitle": "Date",
+    "date": "Saturday November 2nd, 2024",
+    "saveTheDateButton": "Save the Date",
+    "addressTitle": "Address",
+    "address": "Calle 1ra #2, Santo Domingo Este",
+    "addressButton": "Get directions",
+    "locationTitle": "Location",
+    "location": "Centro Educativo Villa de Angeles"
   },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
