@@ -3,8 +3,8 @@ import watercolorBg from "../assets/watercolor-bg.jpg";
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const eventLink = isMobile
-  ? "googlecalendar://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NHZoaTA1MHY2ZmNrdGllZTc2cDBnNmRkdXUgZTk3NThjMmNkMDRkZDU5ODQzNWM5NWZjOGIyMmZmMzkzYjZhZmY3ZTY5Yjk1ZWY2NjNlMzllYTc1M2U3MmQyZEBn&tmsrc=e9758c2cd04dd598435c95fc8b22ff393b6aff7e69b95ef663e39ea753e72d2d%40group.calendar.google.com"
-  : "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NHZoaTA1MHY2ZmNrdGllZTc2cDBnNmRkdXUgZTk3NThjMmNkMDRkZDU5ODQzNWM5NWZjOGIyMmZmMzkzYjZhZmY3ZTY5Yjk1ZWY2NjNlMzllYTc1M2U3MmQyZEBn&tmsrc=e9758c2cd04dd598435c95fc8b22ff393b6aff7e69b95ef663e39ea753e72d2d%40group.calendar.google.com";
+  ? `href="googlecalendar://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NHZoaTA1MHY2ZmNrdGllZTc2cDBnNmRkdXUgZTk3NThjMmNkMDRkZDU5ODQzNWM5NWZjOGIyMmZmMzkzYjZhZmY3ZTY5Yjk1ZWY2NjNlMzllYTc1M2U3MmQyZEBn&tmsrc=e9758c2cd04dd598435c95fc8b22ff393b6aff7e69b95ef663e39ea753e72d2d%40group.calendar.google.com"`
+  : `href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NHZoaTA1MHY2ZmNrdGllZTc2cDBnNmRkdXUgZTk3NThjMmNkMDRkZDU5ODQzNWM5NWZjOGIyMmZmMzkzYjZhZmY3ZTY5Yjk1ZWY2NjNlMzllYTc1M2U3MmQyZEBn&tmsrc=e9758c2cd04dd598435c95fc8b22ff393b6aff7e69b95ef663e39ea753e72d2d%40group.calendar.google.com" target="_blank" rel="noopener noreferrer"`;
 
 const bachelorette = document.createElement("section");
 bachelorette.className = "section relative w-screen h-full";
@@ -21,7 +21,7 @@ bachelorette.innerHTML = `
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="bachelorette.dateTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="bachelorette.date" class="text-amber-950 max-lg:text-sm"></p>
-          <a href=${eventLink} target="_blank" rel="noopener noreferrer">
+          <a ${eventLink}>
             <button i18n-key="bachelorette.saveTheDateButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base"></button>
           </a>
         </div>
