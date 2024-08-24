@@ -5,7 +5,7 @@ const bachelorette = document.createElement("section");
 bachelorette.className = "section relative w-screen h-full";
 bachelorette.id = "bachelorette";
 bachelorette.innerHTML = `
-  <div class="flex w-screen h-full flex-col items-center justify-center border-b-4 border-t-4 border-amber-950">
+  <div class="flex w-screen h-full flex-col items-center justify-center text-center border-b-4 border-t-4 border-amber-950">
     <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-full opacity-25" />
       <div class="flex flex-col space-y-1 pt-4 w-screen justify-center items-center">
         <div class="border-t border-2 border-amber-900 lg:w-96 w-2/3"></div>
@@ -15,21 +15,21 @@ bachelorette.innerHTML = `
       <div class="flex flex-col py-4 z-10 h-full items-center justify-center">
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="bachelorette.dateTitle" class="text-amber-950 font-bold"></p>
-          <p i18n-key="bachelorette.date" class="text-amber-950 text-sm"></p>
+          <p i18n-key="bachelorette.date" class="text-amber-950 max-lg:text-sm"></p>
           <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NHZoaTA1MHY2ZmNrdGllZTc2cDBnNmRkdXUgZTk3NThjMmNkMDRkZDU5ODQzNWM5NWZjOGIyMmZmMzkzYjZhZmY3ZTY5Yjk1ZWY2NjNlMzllYTc1M2U3MmQyZEBn&tmsrc=e9758c2cd04dd598435c95fc8b22ff393b6aff7e69b95ef663e39ea753e72d2d%40group.calendar.google.com" target="_blank" rel="noopener noreferrer">
             <button i18n-key="bachelorette.saveTheDateButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base"></button>
           </a>
         </div>
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="bachelorette.addressTitle" class="text-amber-950 font-bold"></p>
-          <p i18n-key="bachelorette.address" class="text-amber-950 text-sm"></p>
+          <p i18n-key="bachelorette.address" class="text-amber-950 max-lg:text-sm"></p>
           <a href="https://www.google.com/maps/dir/?api=1&destination=18.467662437460437,-69.82525449113034" target="_blank" rel="noopener noreferrer">
             <button i18n-key="bachelorette.addressButton" class="fade-button opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base"></button>
           </a>
         </div>
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="bachelorette.locationTitle" class="text-amber-950 font-bold"></p>
-          <p i18n-key="bachelorette.location" class="text-amber-950"></p>
+          <p i18n-key="bachelorette.location" class="text-amber-950 max-lg:text-sm"></p>
           <a href="#">
             <button class="fade-button rsvp opacity-0 h-10 my-4 w-48 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-base" data-source="bachelorette">RSVP</button>
           </a>

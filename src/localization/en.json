@@ -27,7 +27,7 @@
     "date": "Saturday November 9th, 2024",
     "saveTheDateButton": "Save the Date",
     "addressTitle": "Address",
-    "address": "Calle Mercedes #4, Zona Colonial, Santo Domingo",
+    "address": "Calle Mercedes #4, Zona Colonial\nSanto Domingo",
     "addressButton": "Get directions",
     "locationTitle": "Location",
     "location": "Círculo de Coleccionistas",
@@ -40,7 +40,7 @@
   "party": {
     "title": "Party",
     "musicHeader": "Music",
-    "musicContent": "We want to hear your favorite songs!\n\n Please share your suggestions with us and we may include them at the party.",
+    "musicContent": "We want to hear your favorite songs!\n\nPlease share your suggestions with us and we may include them at the party.",
     "recommendSong": "Request a Song",
     "dressCodeHeader": "Dress Code",
     "dressCodeSubheader": "Formal",
@@ -72,7 +72,7 @@
     "date": "Saturday November 2nd, 2024",
     "saveTheDateButton": "Save the Date",
     "addressTitle": "Address",
-    "address": "Calle 1ra #2, Santo Domingo Este",
+    "address": "Calle 1ra #2, Tropical Del Este\nSanto Domingo Este",
     "addressButton": "Get directions",
     "locationTitle": "Location",
     "location": "Centro Educativo Villa de Angeles"
