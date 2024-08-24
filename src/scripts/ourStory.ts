@@ -27,7 +27,7 @@ ourStory.innerHTML = `
     </div>
     <p i18n-key="ourStory.content" class="text-amber-900 p-2 lg:py-4 py-6 font-serif"></p>
   <div class="relative w-screen overflow-hidden">
-  <div class="flex lg:flex-row flex-col max-lg:space-y-2 items-center justify-center space-x-2 lg:space-x-6 lg:my-6 my-2">
+  <div class="flex lg:flex-row flex-col max-lg:space-y-2 items-center justify-center lg:space-x-2 lg:space-x-6 lg:my-6 my-2">
     <a href="${pic2}" data-fslightbox="gallery" class="transform transition-transform duration-200 hover:scale-105 flex-shrink-0 w-24 lg:w-48">
       <div class="lg:block hidden bg-black p-1 border-amber-50 border-4 rounded-lg">
         <img src="${pic2}" alt="gallery image" class="w-full h-auto rounded-lg" />

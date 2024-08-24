@@ -64,19 +64,16 @@ const submissionContentNegative = `
 
 const dressCode = `
   <div class="flex flex-col space-y-4 pt-4 justify-center items-center text-amber-50 font-serif">
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <button i18n-key="dressCode" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-80 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm"></button>
+    <a href="#dress-code">
+      <button i18n-key="dressCode" class="close-modal py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-72 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm"></button>
     </a>
   </div>
 `;
 
 const additionalContent = `
   <div class="flex flex-col space-y-4 pt-4 justify-center items-center text-amber-50 font-serif">
-    <a href="https://listaderegalos.casacuesta.com/Event/SheylaLoraine-and-Malcom?utm_source=share" target="_blank" rel="noopener noreferrer">
-      <button i18n-key="giftListBachelorette" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-80 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm></button>
-    </a>
-    <a href="https://listaderegalos.casacuesta.com/Event/Malcom-SheylaLoraine" target="_blank" rel="noopener noreferrer">
-      <button i18n-key="giftListWedding" class="py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-80 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm"></button>
+    <a href="#gift-lists">
+      <button i18n-key="nav.giftLists" class="close-modal py-4 rounded-md border-4 shadow-md px-2 border-amber-800 bg-amber-100 text-amber-950 w-72 uppercase font-black font-serif hover:text-amber-800" lg:text-xl text-sm></button>
     </a>
   </div>
 `;
@@ -90,7 +87,7 @@ rsvpModal.innerHTML = `
       <p class="py-4 px-2 text-amber-50 text-4xl">M&S</p>
     </div>
     <div class="flex justify-end">
-      <button id="close-modal" class="text-amber-50 rounded-full border w-10 h-10 mb-2 bg-amber-950 border-amber-700 shadow-md text-3xl">&times;</button>
+      <button class="close-modal text-amber-50 rounded-full border w-10 h-10 mb-2 bg-amber-950 border-amber-700 shadow-md text-3xl">&times;</button>
     </div>
     <div id="modal-content" class="border-2 border-lime-700 bg-lime-800 relative p-4 rounded-lg">
       ${modalContent}
@@ -98,10 +95,12 @@ rsvpModal.innerHTML = `
   </div>
 `;
 
-const closeModal = rsvpModal.querySelector("#close-modal")!;
+const closeModalButtons = document.querySelectorAll(".close-modal");
 
-closeModal.addEventListener("click", () => {
-  rsvpModal.remove();
+closeModalButtons.forEach((closeModal) => {
+  closeModal.addEventListener("click", () => {
+    rsvpModal.remove();
+  });
 });
 
 rsvpModal.addEventListener("click", (event) => {

@@ -24,7 +24,7 @@ party.innerHTML = `
           </a>
       </div>
     </div>
-    <div class="relative flex flex-col w-auto h-80 justify-start items-center z-10 p-2">
+    <div id="dress-code" class="relative flex flex-col w-auto h-80 justify-start items-center z-10 p-2">
       <img src="${flowerBorder1}" alt="flower border" class="absolute max-lg:scale-50 lg:h-56 lg:w-56 -left-12 -bottom-10 max-lg:-bottom-24 max-lg:-left-24 rotate-12 object-contain z-20 rounded-lg pointer-events-none" />
       <div class="flex flex-col rounded-lg shadow-md bg-amber-50 w-80 h-72 justify-start items-center z-10 p-2 text-center">
         <div class="p-4 m-4 border-2 border-amber-700 h-64">

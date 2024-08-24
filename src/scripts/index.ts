@@ -126,3 +126,10 @@ langButtonElement!.addEventListener("click", () => {
     langButton.disabled = false;
   }, 500);
 });
+
+rsvpModal.addEventListener("click", (event) => {
+  const target = event.target as HTMLElement;
+  if (target?.classList.contains("close-modal")) {
+    rsvpModal.remove();
+  }
+});
