@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:America/Santo_Domingo
+X-LIC-LOCATION:America/Santo_Domingo
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0400
+TZNAME:AST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Santo_Domingo:20241026T183000
+DTEND;TZID=America/Santo_Domingo:20241026T220000
+DTSTAMP:20240824T184942Z
+ORGANIZER;CN=Events:mailto:e9758c2cd04dd598435c95fc8b22ff393b6aff7e69b95ef6
+ 63e39ea753e72d2d@group.calendar.google.com
+UID:4vhi050v6fcktiee76p0g6dduu@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=arkmalcom+invite@gmail.com;X-NUM-GUESTS=0:mailto:arkmalcom+invite@g
+ mail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/dzk-nxfu-cff
+X-MICROSOFT-CDO-OWNERAPPTID:491581503
+CREATED:20240816T170946Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://meet.google.com/dz
+ k-nxfu-cff\n\nLearn more about Meet at: https://support.google.com/a/users/
+ answer/9282720\n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20240824T184941Z
+LOCATION:Centro Educativo Villa de Angeles\, Calle 1era #2 Santo Domingo Es
+ te DO\, Santo Domingo Este 11511\, Dominican Republic
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Despedida de Soltera
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
