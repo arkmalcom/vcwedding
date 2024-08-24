@@ -1,6 +1,6 @@
 import { updateContent } from "../i18n/updateContent";
 import { getInviteTypeFromURL } from "../utils/inviteType";
-import { addRSVP } from "../utils/dbOperations";
+import { addToDB } from "../utils/dbOperations";
 
 const inviteType = getInviteTypeFromURL();
 const stage = import.meta.env.VITE_ENV || "dev";
@@ -138,17 +138,21 @@ rsvpForm.addEventListener("submit", async (event) => {
     rsvpForm.querySelector('input[name="source"]') as HTMLInputElement
   ).value;
 
+  let data = {
+    name,
+    email,
+    is_attending: isAttending == "yes",
+    invited_by: invitedBy,
+    source,
+    plus_one_name: plusOneName || "",
+    plus_one_email: plusOneEmail || "",
+    is_plus_one_attending: isPlusOneAttending == "yes" || false,
+  };
+
+  console.log(data);
+
   if (stage === "prod") {
-    await addRSVP(
-      name,
-      email,
-      isAttending === "yes",
-      invitedBy,
-      source,
-      plusOneName,
-      plusOneEmail,
-      isPlusOneAttending === "yes",
-    );
+    await addToDB(data, "rsvp");
   }
 
   const modalContentContainer = rsvpModal.querySelector("#modal-content")!;

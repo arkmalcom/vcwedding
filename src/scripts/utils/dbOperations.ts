@@ -1,38 +1,12 @@
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
 
-async function addRSVP(
-  name: string,
-  email: string,
-  isAttending: boolean,
-  invitedBy: string,
-  source: string,
-  plusOneName?: string,
-  plusOneEmail?: string,
-  isPlusOneAttending?: boolean,
+async function addToDB(
+  obj: { [key: string]: string | boolean },
+  collectionName: string,
 ) {
-  let rsvpData = {
-    name,
-    email,
-    is_attending: isAttending,
-    invited_by: invitedBy,
-    plus_one_name: "",
-    plus_one_email: "",
-    is_plus_one_attending: false,
-    source,
-  };
-
-  if (plusOneName && plusOneEmail && isPlusOneAttending !== undefined) {
-    rsvpData = {
-      ...rsvpData,
-      plus_one_name: plusOneName,
-      plus_one_email: plusOneEmail,
-      is_plus_one_attending: isPlusOneAttending,
-    };
-  }
-
   try {
-    await addDoc(collection(db, "rsvp"), rsvpData);
+    await addDoc(collection(db, collectionName), obj);
     return true;
   } catch (e) {
     console.error("Error adding document: ", e);
@@ -40,4 +14,4 @@ async function addRSVP(
   }
 }
 
-export { addRSVP };
+export { addToDB };

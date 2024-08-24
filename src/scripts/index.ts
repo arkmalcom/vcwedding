@@ -7,6 +7,7 @@ import information from "./information";
 import landing from "./landing";
 import ourStory from "./ourStory";
 import party from "./party";
+import recommendSongModal from "./components/recommendSongModal";
 import rsvpModal from "./components/rsvpModal";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
@@ -127,9 +128,16 @@ langButtonElement!.addEventListener("click", () => {
   }, 500);
 });
 
-rsvpModal.addEventListener("click", (event) => {
+rsvpModal.addEventListener("click", (event: MouseEvent) => {
   const target = event.target as HTMLElement;
   if (target?.classList.contains("close-modal")) {
     rsvpModal.remove();
+  }
+});
+
+recommendSongModal.addEventListener("click", (event: MouseEvent) => {
+  const target = event.target as HTMLElement;
+  if (target?.classList.contains("close-modal")) {
+    recommendSongModal.remove();
   }
 });
