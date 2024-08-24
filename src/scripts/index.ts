@@ -9,6 +9,7 @@ import ourStory from "./ourStory";
 import party from "./party";
 import recommendSongModal from "./components/recommendSongModal";
 import rsvpModal from "./components/rsvpModal";
+import { songSearch } from "./utils/spotifyOperations";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -123,6 +124,13 @@ if (recommmendSongButtonClass) {
   recommmendSongButtonClass.addEventListener("click", (event) => {
     event.preventDefault();
     app.appendChild(recommendSongModal);
+    document
+      .querySelector("#song-title")
+      ?.addEventListener("input", (event: Event) => {
+        console.log("Reading input");
+        const query = (event.target as HTMLInputElement).value;
+        songSearch(query);
+      });
     updateContent();
   });
 }

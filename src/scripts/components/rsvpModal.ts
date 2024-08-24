@@ -1,9 +1,9 @@
 import { updateContent } from "../i18n/updateContent";
 import { getInviteTypeFromURL } from "../utils/inviteType";
-import { addToDB } from "../utils/dbOperations";
+import { addToDB } from "../utils/firestoreOperations";
 
 const inviteType = getInviteTypeFromURL();
-const stage = import.meta.env.VITE_ENV || "dev";
+const stage = "prod";
 
 let modalContent = `
   <form id="rsvp-form" class="flex flex-col space-y-1 items-center pt-4">
@@ -148,8 +148,6 @@ rsvpForm.addEventListener("submit", async (event) => {
     plus_one_email: plusOneEmail || "",
     is_plus_one_attending: isPlusOneAttending == "yes" || false,
   };
-
-  console.log(data);
 
   if (stage === "prod") {
     await addToDB(data, "rsvp");
