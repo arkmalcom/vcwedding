@@ -27,7 +27,7 @@ navbar.innerHTML = `
         <li><a i18n-key="nav.celebration" href="#celebration" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
         <li><a i18n-key="nav.party" href="#party" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
         <li><a i18n-key="nav.location" href="https://www.google.com/maps/dir/?api=1&destination=18.475471,-69.886072" target="_blank" rel="noopener noreferrer" class="text-amber-50 uppercase font-semibold font-serif hover:text-amber-200"></a></li>
-        <li><a href="#" class="rsvp text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2">RSVP</a></li>
+        <li><a href="#" class="rsvp text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2" data-source="wedding">RSVP</a></li>
       </ul>
       <button id="menu-toggle" class="lg:hidden text-amber-50 focus:outline-none">
         <i class="fas fa-bars text-amber-50 text-3xl"></i>
@@ -40,7 +40,7 @@ navbar.innerHTML = `
     <a i18n-key="nav.celebration" href="#celebration" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
     <a i18n-key="nav.party" href="#party" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
     <a i18n-key="nav.location" href="https://www.google.com/maps/dir/?api=1&destination=18.475471,-69.886072" target="_blank" rel="noopener noreferrer" class="block text-amber-50 uppercase font-semibold font-serif hover:text-amber-200 pt-1 underline"></a>
-    <a href="#" class="rsvp block text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2 mt-2">RSVP</a>
+    <a href="#" class="rsvp block text-amber-200 uppercase font-semibold font-serif hover:text-amber-400 hover:border-amber-400 border-2 border-amber-200 p-2 mt-2" data-source="wedding">RSVP</a>
   </div>
 `;
 
