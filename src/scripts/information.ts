@@ -22,15 +22,15 @@ information.innerHTML = `
         <p i18n-key="information.giftListsHeader" class="text-amber-950 text-3xl font-semibold font-stylized"></p>
         <p i18n-key="information.giftListsContent" class="text-amber-950 text-sm p-2"></p>
         <a href="https://listaderegalos.casacuesta.com/Event/Malcom-SheylaLoraine?utm_source=share" target="_blank" rel="noopener noreferrer">
-          <button i18n-key="information.weddingList" class="w-56 lg:w-64 h-auto rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base></button>
+          <button i18n-key="information.weddingList" class="w-56 lg:w-64 h-7 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
         </a>
         <a href="https://listaderegalos.casacuesta.com/Event/SheylaLoraine-and-Malcom?utm_source=share" target="_blank" rel="noopener noreferrer">
-          <button i18n-key="information.bacheloretteList" class="my-4 w-56 lg:w-64 h-auto rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
+          <button i18n-key="information.bacheloretteList" class="my-4 w-56 lg:w-64 h-7 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
         </a>
         <p i18n-key="information.bankInfoHeader" class="text-amber-950 text-3xl font-semibold font-stylized"></p>
         <p i18n-key="information.bankInfoContent" class="text-amber-950 text-sm text-base p-2"></p>
         <a href="#">
-          <button i18n-key="information.bankInfoButton" class="my-4 w-56 lg:w-64 h-auto rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
+          <button i18n-key="information.bankInfoButton" class="my-4 w-56 lg:w-64 h-7 rounded-full border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-50 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
         </a>
     </div>
   </div>
