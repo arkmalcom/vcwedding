@@ -127,7 +127,12 @@ if (recommmendSongButtonClass) {
     document
       .querySelector("#song-title")
       ?.addEventListener("input", (event: Event) => {
-        console.log("Reading input");
+        const query = (event.target as HTMLInputElement).value;
+        songSearch(query);
+      });
+    document
+      .querySelector("#song-title")
+      ?.addEventListener("change", (event: Event) => {
         const query = (event.target as HTMLInputElement).value;
         songSearch(query);
       });
