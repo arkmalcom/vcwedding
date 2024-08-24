@@ -3,7 +3,7 @@ import { getInviteTypeFromURL } from "../utils/inviteType";
 import { addToDB } from "../utils/firestoreOperations";
 
 const inviteType = getInviteTypeFromURL();
-const stage = "prod";
+const stage = import.meta.env.VITE_ENV || "dev";
 
 let modalContent = `
   <form id="rsvp-form" class="flex flex-col space-y-1 items-center pt-4">

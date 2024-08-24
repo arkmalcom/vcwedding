@@ -1,7 +1,7 @@
 import { updateContent } from "../i18n/updateContent";
 import { addToDB } from "../utils/firestoreOperations";
 
-const stage = "prod";
+const stage = import.meta.env.VITE_ENV || "dev";
 
 let modalContent = `
   <form id="recommend-song-form" class="flex flex-col space-y-2 text-center justify-center items-center pt-4 w-full">
