@@ -124,18 +124,18 @@ if (recommmendSongButtonClass) {
   recommmendSongButtonClass.addEventListener("click", (event) => {
     event.preventDefault();
     app.appendChild(recommendSongModal);
-    document
-      .querySelector("#song-title")
-      ?.addEventListener("input", (event: Event) => {
-        const query = (event.target as HTMLInputElement).value;
-        songSearch(query);
-      });
-    document
-      .querySelector("#song-title")
-      ?.addEventListener("change", (event: Event) => {
-        const query = (event.target as HTMLInputElement).value;
-        songSearch(query);
-      });
+    const songTitleInput = document.querySelector(
+      "#song-title",
+    ) as HTMLInputElement;
+    songTitleInput.focus();
+    songTitleInput.addEventListener("input", (event: Event) => {
+      const query = (event.target as HTMLInputElement).value;
+      songSearch(query);
+    });
+    songTitleInput.addEventListener("keyup", (event: Event) => {
+      const query = (event.target as HTMLInputElement).value;
+      songSearch(query);
+    });
     updateContent();
   });
 }
