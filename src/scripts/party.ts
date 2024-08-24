@@ -20,7 +20,7 @@ party.innerHTML = `
           <p i18n-key="party.musicContent" class="text-amber-950 text-sm text-base p-2 pb-10"></p>
           <div class="flex-grow"></div>
           <a href="#">
-              <button i18n-key="party.recommendSong" class="mb-4 fade-button opacity-0 py-1 h-auto w-64 lg:w-72 rounded-md border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-100 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
+              <button i18n-key="party.recommendSong" class="recommend-song mb-4 fade-button opacity-0 py-1 h-auto w-64 lg:w-72 rounded-md border-4 shadow-md px-2 border-lime-950 bg-lime-900 text-amber-100 uppercase font-black font-serif hover:text-amber-200 text-sm lg:text-base"></button>
           </a>
       </div>
     </div>

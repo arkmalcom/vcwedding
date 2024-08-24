@@ -118,6 +118,15 @@ if (rsvpButtonClass) {
   });
 }
 
+const recommmendSongButtonClass = document.querySelector(".recommend-song");
+if (recommmendSongButtonClass) {
+  recommmendSongButtonClass.addEventListener("click", (event) => {
+    event.preventDefault();
+    app.appendChild(recommendSongModal);
+    updateContent();
+  });
+}
+
 const langButtonElement = document.getElementById("lang-button");
 langButtonElement!.addEventListener("click", () => {
   langButton.disabled = true;

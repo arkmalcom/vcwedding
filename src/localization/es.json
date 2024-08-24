@@ -12,7 +12,9 @@
     "email": "Correo Electrónico",
     "plusOne": "Datos de tu acompañante",
     "attendingYes": "Sí, asistiré!",
-    "attendingNo": "No, no asistiré",
+    "attendingNo": "No asistiré",
+    "plusOneAttendingYes": "Sí, asistirá",
+    "plusOneAttendingNo": "No asistirá",
     "invitedBy": "Invitado por parte de",
     "submit": "Enviar",
     "positiveSubmission": "Gracias por confirmar tu asistencia! 😊",
@@ -74,6 +76,12 @@
     "addressButton": "Ver Ubicación",
     "locationTitle": "Lugar",
     "location": "Centro Educativo Villa de Angeles"
+  },
+  "recommendSongForm": {
+    "title": "Recomienda una Canción",
+    "name": "Tu Nombre",
+    "song": "Nombre de la Canción",
+    "submit": "Enviar"
   },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",

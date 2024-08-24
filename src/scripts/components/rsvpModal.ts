@@ -6,44 +6,44 @@ const inviteType = getInviteTypeFromURL();
 const stage = import.meta.env.VITE_ENV || "dev";
 
 let modalContent = `
-  <form id="rsvp-form" class="flex flex-col space-y-1">
-    <label for="name" i18n-key="rsvpForm.name" class="text-amber-50 font-stylized text-2xl"></label>
+  <form id="rsvp-form" class="flex flex-col space-y-1 items-center pt-4">
+    <label for="name" i18n-key="rsvpForm.name" class="text-amber-50 font-serif lg:text-lg text-sm"></label>
     <input type="text" id="name" name="name" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required />
-    <label for="email" i18n-key="rsvpForm.email" class="text-amber-50 font-stylized text-2xl"></label>
+    <label for="email" i18n-key="rsvpForm.email" class="text-amber-50 font-serif lg:text-lg text-sm"></label>
     <input type="email" id="email" name="email" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required />
     <div class="flex space-x-4 justify-center items-center">
       <input type="radio" id="attending-yes" name="attending" value="yes" class="border-lime-950 bg-lime-500 text-lime-500 focus:ring-lime-700 focus:ring-2 focus:ring-lime-600 hover:border-lime-500" required />
-      <label i18n-key="rsvpForm.attendingYes" class="text-amber-50 p-0 m-0"></label>
+      <label i18n-key="rsvpForm.attendingYes" class="text-amber-50 p-0 m-0 lg:text-lg text-sm"></label>
       <input type="radio" id="attending-no" name="attending" value="no" class="border-lime-950 bg-lime-500 text-lime-500 focus:ring-lime-700 focus:ring-2 focus:ring-lime-600 hover:border-lime-500" required />
-      <label id="attending-no-label" i18n-key="rsvpForm.attendingNo" class="text-amber-50"></label>
+      <label id="attending-no-label" i18n-key="rsvpForm.attendingNo" class="text-amber-50 lg:text-lg text-sm"></label>
     </div>
 `;
 
 if (inviteType === "plus-one") {
   modalContent += `
-    <div class="border-1 border-t border-lime-950 bg-lime-800 py-1"></div>
-    <p i18n-key="rsvpForm.plusOne" class="text-amber-50 font-stylized text-2xl"></p>
-    <label for="plus-one-name" i18n-key="rsvpForm.name" class="text-amber-50 font-stylized text-2xl"></label>
+    <div class="border-2 border-b w-full border-amber-950 my-4"></div>
+    <p i18n-key="rsvpForm.plusOne" class="text-amber-50 font-serif lg:text-lg text-sm"></p>
+    <label for="plus-one-name" i18n-key="rsvpForm.name" class="text-amber-50 font-serif lg:text-lg text-sm"></label>
     <input type="text" id="plus-one-name" name="plus-one-name" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required />
-    <label for="plus-one-email" i18n-key="rsvpForm.email" class="text-amber-50 font-stylized text-2xl"></label>
+    <label for="plus-one-email" i18n-key="rsvpForm.email" class="text-amber-50 font-serif lg:text-lg text-sm"></label>
     <input type="email" id="plus-one-email" name="plus-one-email" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required />
     <div class="flex space-x-4 justify-center items-center">
       <input type="radio" id="plus-one-attending-yes" name="plus-one-attending" value="yes" class="border-lime-950 bg-lime-500 text-lime-500 focus:ring-lime-700 focus:ring-2 focus:ring-lime-600 hover:border-lime-500" required />
-      <label i18n-key="rsvpForm.attendingYes" class="text-amber-50 p-0 m-0"></label>
+      <label i18n-key="rsvpForm.plusOneAttendingYes" class="text-amber-50 p-0 m-0 lg:text-lg text-sm"></label>
       <input type="radio" id="plus-one-attending-no" name="plus-one-attending" value="no" class="border-lime-950 bg-lime-500 text-lime-500 focus:ring-lime-700 focus:ring-2 focus:ring-lime-600 hover:border-lime-500" required />
-      <label i18n-key="rsvpForm.attendingNo" class="text-amber-50"></label>
+      <label i18n-key="rsvpForm.plusOneAttendingNo" class="text-amber-50 lg:text-lg text-sm"></label>
     </div>
   `;
 }
 
 modalContent += `
-    <div class="border-1 border-t border-lime-950 bg-lime-800 py-1"></div>
-    <label for="invited-by" i18n-key="rsvpForm.invitedBy" class="text-amber-50 font-stylized text-2xl"></label>
-    <select id="invited-by" name="invited-by" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required>
+    <div class="border-2 border-b w-full border-amber-950 my-4"></div>
+    <label for="invited-by" i18n-key="rsvpForm.invitedBy" class="text-amber-50 font-serif lg:text-lg text-sm"></label>
+    <select id="invited-by" name="invited-by" class="border-2 border-lime-950 bg-lime-700 p-2 w-36 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required>
       <option value="sheyla">Sheyla</option>
       <option value="malcom">Malcom</option>
     </select>
-    <button type="submit" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 hover:bg-lime-600 hover:border-lime-500">Submit</button>
+    <button type="submit" i18n-key="rsvpForm.submit" class="border-2 border-lime-950 bg-lime-700 h-8 w-24 rounded-full text-amber-50 hover:bg-lime-600 hover:border-lime-500"></button>
   </form>
 `;
 

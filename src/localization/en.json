@@ -13,6 +13,8 @@
     "plusOne": "Plus One - Information",
     "attendingYes": "I'll be there!",
     "attendingNo": "I can't make it",
+    "plusOneAttendingYes": "They'll be there!",
+    "plusOneAttendingNo": "They can't make it",
     "invitedBy": "Invited by",
     "submit": "Submit",
     "positiveSubmission": "Thank you for confirming your presence! 😊",
@@ -74,6 +76,12 @@
     "addressButton": "Get directions",
     "locationTitle": "Location",
     "location": "Centro Educativo Villa de Angeles"
+  },
+  "recommendSongForm": {
+    "title": "Request a Song",
+    "name": "Your Name",
+    "song": "Song Name",
+    "submit": "Submit"
   },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
