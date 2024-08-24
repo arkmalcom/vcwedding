@@ -124,18 +124,16 @@ if (recommmendSongButtonClass) {
   recommmendSongButtonClass.addEventListener("click", (event) => {
     event.preventDefault();
     app.appendChild(recommendSongModal);
+
     const songTitleInput = document.querySelector(
       "#song-title",
     ) as HTMLInputElement;
-    songTitleInput.focus();
+
     songTitleInput.addEventListener("input", (event: Event) => {
       const query = (event.target as HTMLInputElement).value;
       songSearch(query);
     });
-    songTitleInput.addEventListener("keyup", (event: Event) => {
-      const query = (event.target as HTMLInputElement).value;
-      songSearch(query);
-    });
+
     updateContent();
   });
 }
