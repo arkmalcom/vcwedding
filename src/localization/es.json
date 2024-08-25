@@ -81,7 +81,8 @@
     "title": "Recomienda una Canción",
     "name": "Tu Nombre",
     "song": "Nombre de la Canción",
-    "submit": "Enviar"
+    "submit": "Enviar",
+    "submitted": "¡Gracias por tu recomendación! La tendremos en cuenta.\n Puedes hacer otra recomendación si deseas. 😊"
   },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",

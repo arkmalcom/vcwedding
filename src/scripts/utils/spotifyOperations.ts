@@ -66,7 +66,7 @@ async function searchSpotify(
   }
 
   const data = await response.json();
-  console.log(data);
+
   return data.tracks.items.map((item: any) => ({
     name: item.name,
     artist: item.artists[0].name,
@@ -78,7 +78,6 @@ async function searchSpotify(
 const songSearch = debounce(async (query: string) => {
   try {
     const results = await searchSpotify(query);
-    console.log(results);
     displaySearchResults(results);
   } catch (error) {
     console.error(error);

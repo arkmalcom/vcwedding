@@ -54,14 +54,19 @@ const recommendSongForm = recommendSongModal.querySelector(
 recommendSongForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const name = (recommendSongForm.querySelector("#name") as HTMLInputElement)
-    .value;
-  const songTitle = (
-    recommendSongForm.querySelector("#song-title") as HTMLInputElement
-  ).value;
-  const songUrl = (
-    recommendSongForm.querySelector("#song-url") as HTMLInputElement
-  ).value;
+  const songTitleInput = recommendSongForm.querySelector(
+    "#song-title",
+  ) as HTMLInputElement;
+  const songUrlInput = recommendSongForm.querySelector(
+    "#song-url",
+  ) as HTMLInputElement;
+  const nameInput = recommendSongForm.querySelector(
+    "#name",
+  ) as HTMLInputElement;
+
+  const name = nameInput.value;
+  const songTitle = songTitleInput.value;
+  const songUrl = songUrlInput.value;
 
   let data = {
     name,
@@ -72,6 +77,23 @@ recommendSongForm.addEventListener("submit", async (event) => {
   if (stage === "prod") {
     await addToDB(data, "songs");
   }
+
+  const modalContentContainer = recommendSongModal.querySelector(
+    "#modal-content",
+  ) as HTMLDivElement;
+  modalContentContainer.innerHTML = `
+    <form id="recommend-song-form" class="flex flex-col space-y-2 text-center justify-center items-center pt-4 w-full">
+      <h1 i18n-key="recommendSongForm.title" class="text-amber-50 font-stylized text-2xl pb-6"></h1>
+      <p i18n-key="recommendSongForm.submitted" class="text-amber-50"></p>
+      <label for="name" i18n-key="recommendSongForm.name" class="text-amber-50 font-serif text-sm"></label>
+      <input type="text" id="name" name="name" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" value=${name} />
+      <label for="song-title" i18n-key="recommendSongForm.song" class="text-amber-50 font-serif text-sm"></label>
+      <input type="text" id="song-title" name="song-title" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required />
+      <div id="search-results" class="hidden relative z-10 space-y-1 text-amber-50 bg-lime-950 shadow-lg border border-lime-700 rounded cursor-pointer"></div>
+      <input type="hidden" id="song-url" name="song-url" class="hidden" required />
+      <button type="submit" i18n-key="recommendSongForm.submit" class="border-2 border-lime-950 bg-lime-700 h-8 w-24 rounded-full text-amber-50 hover:bg-lime-600 hover:border-lime-500"></button>
+    </form>
+  `;
 
   updateContent();
 });

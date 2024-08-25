@@ -81,7 +81,8 @@
     "title": "Request a Song",
     "name": "Your Name",
     "song": "Song Name",
-    "submit": "Submit"
+    "submit": "Submit",
+    "submitted": "Thank you for your suggestion!\n Feel free to make another! 😊"
   },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
