@@ -7,6 +7,7 @@ import information from "./information";
 import landing from "./landing";
 import ourStory from "./ourStory";
 import party from "./party";
+import bankInfoModal from "./components/bankInfoModal";
 import recommendSongModal from "./components/recommendSongModal";
 import rsvpModal from "./components/rsvpModal";
 import { songSearch } from "./utils/spotifyOperations";
@@ -138,6 +139,16 @@ if (recommmendSongButtonClass) {
   });
 }
 
+const bankInfoButtonClass = document.querySelector(".bank-info");
+if (bankInfoButtonClass) {
+  bankInfoButtonClass.addEventListener("click", (event) => {
+    event.preventDefault();
+    app.appendChild(bankInfoModal);
+    updateContent();
+  });
+}
+
+
 const langButtonElement = document.getElementById("lang-button");
 langButtonElement!.addEventListener("click", () => {
   langButton.disabled = true;
@@ -152,6 +163,13 @@ rsvpModal.addEventListener("click", (event: MouseEvent) => {
   const target = event.target as HTMLElement;
   if (target?.classList.contains("close-modal")) {
     rsvpModal.remove();
+  }
+});
+
+bankInfoModal.addEventListener("click", (event: MouseEvent) => {
+  const target = event.target as HTMLElement;
+  if (target?.classList.contains("close-modal")) {
+    bankInfoModal.remove();
   }
 });
 

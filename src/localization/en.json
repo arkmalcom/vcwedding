@@ -84,6 +84,14 @@
     "submit": "Submit",
     "submitted": "Thank you for your suggestion!\n Feel free to make another! 😊"
   },
+  "bankInfoModal": {
+    "title": "Bank Account Information",
+    "content": "If you prefer to make a bank transfer, you can find our account information below:\n\n",
+    "malcomHeader": "Malcom",
+    "sheylaHeader": "Sheyla",
+    "malcomContent": "Banco BHD\nSavings Account\n12281960019\n\n",
+    "sheylaContent": "Banco de Reservas\nSavings Account\n9600703344"
+  },
   "title": "Wedding",
   "saveTheDate": "Save the Date",
   "locationButton": "Get directions",

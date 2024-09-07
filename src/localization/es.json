@@ -84,6 +84,14 @@
     "submit": "Enviar",
     "submitted": "¡Gracias por tu recomendación! La tendremos en cuenta.\n Puedes hacer otra recomendación si deseas. 😊"
   },
+  "bankInfoModal": {
+    "title": "Información Bancaria",
+    "content": "Si prefieres hacer una transferencia bancaria, puedes utilizar la siguiente información:\n\n",
+    "malcomHeader": "Malcom",
+    "sheylaHeader": "Sheyla",
+    "malcomContent": "Banco BHD\nCuenta de Ahorros\n12281960019\n\n",
+    "sheylaContent": "Banreservas\nCuenta de Ahorros\n9600703344"
+  },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",
   "saveTheDate": "Tenemos el gusto de invitarte a nuestra boda",
