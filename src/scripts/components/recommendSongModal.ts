@@ -2,8 +2,6 @@ import { updateContent } from "../i18n/updateContent";
 import { addToDB } from "../utils/firestoreOperations";
 import { addSongToPlaylist, getAccessToken } from "../utils/spotifyOperations";
 
-const stage = import.meta.env.VITE_ENV || "dev";
-
 let modalContent = `
   <form id="recommend-song-form" class="flex flex-col space-y-2 text-center justify-center items-center pt-4 w-full">
     <h1 i18n-key="recommendSongForm.title" class="text-amber-900 font-stylized text-2xl pb-6"></h1>
@@ -84,10 +82,8 @@ recommendSongForm.addEventListener("submit", async (event) => {
   const trackUri = `spotify:track:${songId}`;
   const accessToken = await getAccessToken();
 
-  if (stage === "prod") {
-    await addToDB(data, "songs");
-    await addSongToPlaylist(accessToken, trackUri);
-  }
+  await addToDB(data, "songs");
+  await addSongToPlaylist(accessToken, trackUri);
 
   const modalContentContainer = recommendSongModal.querySelector(
     "#modal-content",

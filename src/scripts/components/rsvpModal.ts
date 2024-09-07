@@ -3,7 +3,6 @@ import { getInviteTypeFromURL } from "../utils/inviteType";
 import { addToDB } from "../utils/firestoreOperations";
 
 const inviteType = getInviteTypeFromURL();
-const stage = import.meta.env.VITE_ENV || "dev";
 
 let modalContent = `
   <form id="rsvp-form" class="flex flex-col space-y-1 items-center pt-4">
@@ -149,9 +148,7 @@ rsvpForm.addEventListener("submit", async (event) => {
     is_plus_one_attending: isPlusOneAttending == "yes" || false,
   };
 
-  if (stage === "prod") {
-    await addToDB(data, "rsvp");
-  }
+  await addToDB(data, "rsvp");
 
   const modalContentContainer = rsvpModal.querySelector("#modal-content")!;
 
