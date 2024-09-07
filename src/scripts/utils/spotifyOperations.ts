@@ -9,19 +9,22 @@ const resultItemStyle =
 async function fetchSpotifyToken(): Promise<string> {
   const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   const clientSecret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+  const refreshToken = import.meta.env.VITE_SPOTIFY_REFRESH_TOKEN;
 
   const tokenEndpoint = "https://accounts.spotify.com/api/token";
-  const credentials = btoa(`${clientId}:${clientSecret}`);
+  const authData = new URLSearchParams({
+    grant_type: "refresh_token",
+    refresh_token: refreshToken,
+    client_id: clientId,
+    client_secret: clientSecret,
+  });
 
   const response = await fetch(tokenEndpoint, {
     method: "POST",
     headers: {
-      Authorization: `Basic ${credentials}`,
       "Content-Type": "application/x-www-form-urlencoded",
     },
-    body: new URLSearchParams({
-      grant_type: "client_credentials",
-    }),
+    body: authData,
   });
 
   if (!response.ok) {
@@ -68,11 +71,32 @@ async function searchSpotify(
   const data = await response.json();
 
   return data.tracks.items.map((item: any) => ({
+    id: item.id,
     name: item.name,
     artist: item.artists[0].name,
     thumbnail: item.album.images[0].url,
     url: item.external_urls.spotify,
   }));
+}
+
+async function addSongToPlaylist(accessToken: string, trackUri: string) {
+  const playlistId = import.meta.env.VITE_SPOTIFY_PLAYLIST_ID;
+  const addTracksEndpoint = `https://api.spotify.com/v1/playlists/${playlistId}/tracks`;
+
+  const response = await fetch(addTracksEndpoint, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      uris: [trackUri],
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to add track to playlist");
+  }
 }
 
 const songSearch = debounce(async (query: string) => {
@@ -103,6 +127,7 @@ function displaySearchResults(results: any[]) {
 
       resultItem.className = resultItemStyle;
       resultItem.dataset.songUrl = track.url;
+      resultItem.dataset.id = track.id;
 
       const textContainer = document.createElement("div");
       textContainer.className = "flex-1 text-sm";
@@ -127,9 +152,11 @@ function selectSong(track: any) {
     "#song-title",
   ) as HTMLInputElement;
   const songUrlInput = document.querySelector("#song-url") as HTMLInputElement;
+  const songIdInput = document.querySelector("#song-id") as HTMLInputElement;
 
   songTitleInput.value = track.name;
   songUrlInput.value = track.url;
+  songIdInput.value = track.id;
 
   const resultsContainer = document.querySelector(
     "#search-results",
@@ -137,4 +164,4 @@ function selectSong(track: any) {
   resultsContainer.classList.add("hidden");
 }
 
-export { songSearch };
+export { addSongToPlaylist, getAccessToken, songSearch };

@@ -1,7 +1,8 @@
 import { updateContent } from "../i18n/updateContent";
 import { addToDB } from "../utils/firestoreOperations";
+import { addSongToPlaylist, getAccessToken } from "../utils/spotifyOperations";
 
-const stage = import.meta.env.VITE_ENV || "dev";
+const stage = "prod";
 
 let modalContent = `
   <form id="recommend-song-form" class="flex flex-col space-y-2 text-center justify-center items-center pt-4 w-full">
@@ -12,6 +13,7 @@ let modalContent = `
     <input type="text" id="song-title" name="song-title" class="border-2 border-lime-950 bg-lime-700 p-2 rounded-md text-amber-50 focus:border-lime-500 focus:bg-lime-600 focus:ring-lime-600 hover:border-lime-500" required />
     <div id="search-results" class="hidden relative z-10 space-y-1 text-amber-50 bg-lime-950 shadow-lg border border-lime-700 rounded cursor-pointer"></div>
     <input type="hidden" id="song-url" name="song-url" class="hidden" required />
+    <input type="hidden" id="song-id" name="song-id" class="hidden" required />
     <button type="submit" i18n-key="recommendSongForm.submit" class="border-2 border-lime-950 bg-lime-700 h-8 w-24 rounded-full text-amber-50 hover:bg-lime-600 hover:border-lime-500"></button>
   </form>
 `;
@@ -63,19 +65,28 @@ recommendSongForm.addEventListener("submit", async (event) => {
   const nameInput = recommendSongForm.querySelector(
     "#name",
   ) as HTMLInputElement;
+  const songIdInput = recommendSongForm.querySelector(
+    "#song-id",
+  ) as HTMLInputElement;
 
   const name = nameInput.value;
   const songTitle = songTitleInput.value;
   const songUrl = songUrlInput.value;
+  const songId = songIdInput.value;
 
   let data = {
     name,
     song_title: songTitle,
     song_url: songUrl,
+    song_id: songId,
   };
+
+  const trackUri = `spotify:track:${songId}`;
+  const accessToken = await getAccessToken();
 
   if (stage === "prod") {
     await addToDB(data, "songs");
+    await addSongToPlaylist(accessToken, trackUri);
   }
 
   const modalContentContainer = recommendSongModal.querySelector(
