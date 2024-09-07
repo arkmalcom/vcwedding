@@ -5,7 +5,7 @@ const bachelorette = document.createElement("section");
 bachelorette.className = "section relative w-screen h-full";
 bachelorette.id = "bachelorette";
 bachelorette.innerHTML = `
-  <div class="flex w-screen h-full flex-col items-center justify-center text-center border-b-4 border-t-4 border-amber-950">
+  <div class="flex w-screen h-full flex-col items-center justify-center text-center border-b-4 border-amber-950">
     <img src="${watercolorBg}" alt="watercolor background" class="absolute object-cover object-right top-0 w-screen h-full opacity-25" />
       <div class="flex flex-col space-y-1 pt-4 w-screen justify-center items-center">
         <div class="border-t border-2 border-amber-900 lg:w-96 w-2/3"></div>
