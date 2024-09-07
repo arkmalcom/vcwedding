@@ -68,6 +68,7 @@
   },
   "bachelorette": {
     "title": "Bachelorette Party",
+    "subheader": "For our lovely ladies",
     "dateTitle": "Date",
     "date": "Saturday November 2nd, 2024",
     "saveTheDateButton": "Save the Date",
@@ -89,8 +90,8 @@
     "content": "If you prefer to make a bank transfer, you can find our account information below:\n\n",
     "malcomHeader": "Malcom",
     "sheylaHeader": "Sheyla",
-    "malcomContent": "Banco BHD\nSavings Account\n12281960019\n\n",
-    "sheylaContent": "Banco de Reservas\nSavings Account\n9600703344"
+    "malcomContent": "Banco BHD\nSavings Account\n12281960019\nPassport Number: AAD345403\n\n",
+    "sheylaContent": "Banco de Reservas\nSavings Account\n9600703344\nCedula Number: 223-0139295-1"
   },
   "title": "Wedding",
   "saveTheDate": "Save the Date",

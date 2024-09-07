@@ -54,7 +54,7 @@
     "giftListsContent": "Para nosotros tu presencia es lo más importante, pero si deseas contribuir a nuestras listas de regalos, las puedes encontrar aquí.",
     "bacheloretteList": "Despedida de Soltera",
     "weddingList": "Boda",
-    "bankInfoHeader": "Cuenta Bancaria",
+    "bankInfoHeader": "Cuentas Bancarias",
     "bankInfoContent": "Si prefieres hacer una transferencia bancaria, puedes encontrar nuestra información bancaria aquí.",
     "bankInfoButton": "Información Bancaria"
   },
@@ -68,6 +68,7 @@
   },
   "bachelorette": {
     "title": "Despedida de Soltera",
+    "subheader": "Para nuestras chicas invitadas",
     "dateTitle": "Día",
     "date": "Sábado 26 de Octubre a las 6:30PM",
     "saveTheDateButton": "Guardar Fecha",
@@ -89,8 +90,8 @@
     "content": "Si prefieres hacer una transferencia bancaria, puedes utilizar la siguiente información:\n\n",
     "malcomHeader": "Malcom",
     "sheylaHeader": "Sheyla",
-    "malcomContent": "Banco BHD\nCuenta de Ahorros\n12281960019\n\n",
-    "sheylaContent": "Banreservas\nCuenta de Ahorros\n9600703344"
+    "malcomContent": "Banco BHD\nSavings Account\n12281960019\nNumero de Pasaporte: AAD345403\n\n",
+    "sheylaContent": "Banco de Reservas\nSavings Account\n9600703344\nNumero de Cedula: 223-0139295-1"
   },
   "title": "Boda de Malcom y Sheyla",
   "locationButton": "Ver Ubicación",

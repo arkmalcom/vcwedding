@@ -13,6 +13,7 @@ bachelorette.innerHTML = `
         <div class="border-b border-2 border-amber-900 lg:w-96 w-2/3"></div>
       </div>
       <div class="flex flex-col py-4 z-10 h-full items-center justify-center">
+        <h2 i18n-key="bachelorette.subheader" class="text-amber-950 font-bold font-serif text-xl underline"></h2>
         <div class="flex flex-col rounded-lg h-36 w-80 text-lg font-serif justify-center items-center">
           <p i18n-key="bachelorette.dateTitle" class="text-amber-950 font-bold"></p>
           <p i18n-key="bachelorette.date" class="text-amber-950 max-lg:text-sm"></p>
