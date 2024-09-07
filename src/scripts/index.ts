@@ -148,7 +148,12 @@ if (bankInfoButtonClass) {
   });
 }
 
-changeLanguage();
+const urlParams = new URLSearchParams(window.location.search);
+const queryLang = urlParams.get("hl");
+if (queryLang) {
+  changeLanguage();
+}
+
 const langButtonElement = document.getElementById("lang-button");
 langButtonElement!.addEventListener("click", () => {
   langButton.disabled = true;

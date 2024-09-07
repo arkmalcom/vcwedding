@@ -1,5 +1,10 @@
 import leafBorder from "../assets/leaf-border.jpg";
 import watercolorBg from "../assets/watercolor-bg.jpg";
+import { getInviteTypeFromURL } from "./utils/inviteType";
+
+const inviteType = getInviteTypeFromURL();
+const inviteAmount = inviteType === "plus-one" ? "2" : "1";
+const inviteText = inviteType === "plus-one" ? "invitePeople" : "invitePerson";
 
 const landing = document.createElement("div");
 landing.className = "h-screen bg-cover bg-fixed max-lg:bg-left";
@@ -22,7 +27,12 @@ landing.innerHTML = `
       <div class="lg:py-8 py-4">
         <a href="#" class="rsvp text-amber-950 uppercase font-semibold font-stylized hover:text-amber-600 hover:border-amber-600 border-2 border-amber-950 p-2" data-source="wedding">RSVP</a>
       </div>
-      <div class="relative top-4">
+      <div class="space-y-1 py-2">
+      <h1 i18n-key="invitationType" class="text-amber-950 lg:text-4xl text-base font-semibold font-serif"></h1>
+      <span><p class="text-amber-800 lg:text-4xl text-base font-semibold font-serif">${inviteAmount}</p>
+      <p i18n-key=${inviteText} class="text-amber-800 lg:text-4xl text-base font-semibold font-serif"></p></span>
+      </div>
+      <div class="relative top-4 w-full">
         <i class="fas fa-chevron-down down-arrow bottom-0 text-amber-950 lg:text-4xl text-2xl"></i>
       </div>
     </div>

@@ -11,17 +11,11 @@ function updateContent() {
 
 function changeLanguage() {
   const urlParams = new URLSearchParams(window.location.search);
-  const queryLang = urlParams.get("hl") || "es";
+  const currentLang = i18next.language;
+  const queryLang = urlParams.get("hl");
+  const newLang = queryLang || (currentLang === "es" ? "en" : "es");
 
-  let savedLanguage = localStorage.getItem("language");
-  let currentLanguage = queryLang || savedLanguage || "es";
-
-  if (queryLang) {
-    localStorage.setItem("language", queryLang);
-    currentLanguage = queryLang;
-  }
-
-  i18next.changeLanguage(queryLang, () => {
+  i18next.changeLanguage(newLang, () => {
     updateContent();
   });
   const langButton = document.getElementById("lang-button");
