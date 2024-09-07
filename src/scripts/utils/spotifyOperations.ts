@@ -4,7 +4,7 @@ let cachedToken: string | null = null;
 let tokenExpirationTime: number | null = null;
 
 const resultItemStyle =
-  "result-item flex flex-1 items-center text-sm hover:bg-lime-700 active:bg-lime-700 focus:bg-lime-700";
+  "p-2 result-item flex flex-1 items-center text-sm hover:bg-amber-500 active:bg-amber-500 focus:bg-amber-500";
 
 async function fetchSpotifyToken(): Promise<string> {
   const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
