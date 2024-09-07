@@ -148,7 +148,6 @@ if (bankInfoButtonClass) {
   });
 }
 
-
 const langButtonElement = document.getElementById("lang-button");
 langButtonElement!.addEventListener("click", () => {
   langButton.disabled = true;
