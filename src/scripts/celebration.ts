@@ -64,7 +64,7 @@ const numHours = celebration.querySelector("#num-hours")!;
 const numMinutes = celebration.querySelector("#num-minutes")!;
 const numSeconds = celebration.querySelector("#num-seconds")!;
 
-const countdown = new CountdownTimer("2024-11-09T17:00:00");
+const countdown = new CountdownTimer("2024-11-09T18:00:00");
 
 countdown.start((days, hours, minutes, seconds) => {
   numDays.textContent = `${days}`;

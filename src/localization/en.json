@@ -24,7 +24,7 @@
   "celebration": {
     "title": "Celebration",
     "dateTitle": "Date",
-    "date": "Saturday November 9th, 2024",
+    "date": "Saturday November 9th, 2024\n 6:00PM",
     "saveTheDateButton": "Save the Date",
     "addressTitle": "Address",
     "address": "Calle Mercedes #4, Zona Colonial\nSanto Domingo",
@@ -104,7 +104,7 @@
   "hours": "Hrs.",
   "minutes": "Min.",
   "seconds": "Sec.",
-  "date": "November 9th, 2024",
+  "date": "November 9th, 2024 - 6:00PM",
   "dressCode": "Dress Code",
   "giftListBachelorette": "Gift List (Despedida)",
   "giftListWedding": "Gift List (Wedding)"
