@@ -65,7 +65,7 @@ const numHours = bachelorette.querySelector("#num-hours")!;
 const numMinutes = bachelorette.querySelector("#num-minutes")!;
 const numSeconds = bachelorette.querySelector("#num-seconds")!;
 
-const countdown = new CountdownTimer("2024-10-26T18:30:00");
+const countdown = new CountdownTimer("2024-10-26T19:30:00");
 
 countdown.start((days, hours, minutes, seconds) => {
   numDays.textContent = `${days}`;
